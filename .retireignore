@@ -1,0 +1,5 @@
+node_modules/typedoc-default-themes/bin/default/assets/js/main.js
+
+coverage-report/
+docs/
+docs-sources/

@@ -1,0 +1,78 @@
+#!/usr/bin/env node
+
+// Executed when running npx mage create
+if (process.argv[2] === 'create') {
+	return require('../scripts/create.js');
+}
+
+const prettyjson = require('prettyjson');
+const chalk = require('chalk');
+const path = require('path');
+const cwd = process.cwd();
+
+let app;
+
+function logError(line) {
+	console.error(chalk.red.bold(line));
+}
+
+function logInfo(line) {
+	console.error(chalk.green(line));
+}
+
+try {
+	app = require(cwd);
+} catch (error) {
+	const errorData = Object.assign({
+		stack: error.stack
+	}, error);
+
+	logError('');
+	logError('Failed to load MAGE application');
+
+	if (process.platform === 'win32') {
+		logError('-------------------------------');
+	} else {
+		logError('▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔');
+	}
+
+	console.error(prettyjson.render(errorData, null, 2));
+
+	logError('');
+	logError('Make sure to properly set the value of "main" in your package.json,');
+	logError('and that your code is valid.');
+
+	process.exit(-1);
+}
+
+
+if (!app.boot) {
+	const isTypeScript = !!require.extensions.ts;
+	const extension = isTypeScript ? 'ts' : 'js';
+
+	const packageJson = require(path.join(cwd, 'package.json'));
+	const main = packageJson.main || `./index.${extension}`;
+
+	logError('');
+	logError(`Failed to load MAGE application: mage is not exported by ${main}`);
+	logError('');
+	logError('Make sure to require or import MAGE, configure it, and export it back:');
+	logError('');
+
+	if (isTypeScript) {
+		logInfo('  import * as mage from \'mage\';');
+		logInfo('  export = mage;');
+	} else {
+		logInfo('  var mage = module.exports = require(\'mage\');');
+	}
+
+	logError('');
+	process.exit(-1);
+}
+
+app.boot((error) => {
+	if (error) {
+		logError(`Failed to load MAGE application: ${error.stack || error}`);
+		app.exit(1, true);
+	}
+});

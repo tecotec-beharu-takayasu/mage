@@ -1,0 +1,39 @@
+os:
+  - linux
+  - osx
+
+dist: trusty
+
+language: node_js
+node_js:
+  - 8
+  - 9
+
+#
+# The last test is required to avoid issues with peer dependencies upon
+# `npm install`.
+#
+# See:
+#   https://github.com/npm/npm/issues/4749
+#   https://stackoverflow.com/questions/33816824/getting-npm-err-code-epeerinvalid-on-npm-packages-global-install
+#
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install zmq; fi
+  - npm install -g npm@latest
+
+script:
+  - travis_retry npm run test:lint
+  - travis_retry npm run test:security
+  - travis_retry npm run report:coveralls
+
+env:
+  global:
+    - NODE_ENV=development
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - libzmq3-dev

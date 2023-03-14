@@ -1,0 +1,2940 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MAGE User Guide</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;powershell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="images/logo.png" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="powershell">powershell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li><a href='./api/index.html'>API Documentation</a></li>
+            <li><a href='https://github.com/mage/mage'>GitHub</a></li>
+            <li><a href='https://wizcorp.jp/mage'>MAGE website</a></li>
+            <li><a href='https://wizcorp.jp/'>Wizcorp website</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <div class="title">MAGE User Guide</div>
+        <p>Here you will find both the basic documentation for MAGE.
+If you are looking for API documentation,
+please have a look at the <a href="./api/">API reference</a>.</p>
+
+<h2 id="questions-and-issues">Questions and issues</h2>
+
+<p>If you have a question which is not covered by the current
+documentation:</p>
+
+<ol>
+<li><a href="https://github.com/mage/mage/issues/new">Open an issue</a> and request an addition to the documentation</li>
+<li>If you have some time, please make a pull request to enhance the documentation</li>
+</ol>
+
+          <h1 id="introduction">Introduction</h1>
+
+<p>MAGE is a Game Server Framework for Node.js. It allows game developers to quickly create
+highly interactive games that are performant and scalable.</p>
+
+<h2 id="why-mage">Why MAGE?</h2>
+
+<h3 id="write-interactive-games">Write interactive games</h3>
+
+<p>Even if you are writing a single-player game, you may want to develop
+features such as ranking and shops, store player information, or send
+push notifications to your game clients.</p>
+
+<p>MAGE makes this easy by providing both a framework to create RPC calls
+(called user commands), and by providing a backend API to send asynchronous
+messages between players.</p>
+
+<h3 id="write-multiplayer-games">Write multiplayer games</h3>
+
+<p>MAGE&rsquo;s <em>forte</em> comes down to writing multiplayer games. MAGE
+is an excellent fit for writing PVP games.</p>
+
+<h3 id="scalable-game-servers">Scalable game servers</h3>
+
+<p>One of MAGE&rsquo;s goal is to make it easy to write game servers that scale.</p>
+
+<p>But scale how? More specifically, MAGE helps you:</p>
+
+<ul>
+<li>Scale your code; MAGE helps you write code that fits in your head</li>
+<li>Scale your runtime; your game server will run on your laptop, in
+a large cluster, and on anything in between</li>
+<li>Scale your ops; MAGE provides all the necessary APIs for you to be
+able to monitor your game server</li>
+</ul>
+
+<h3 id="rich-ecosystem">Rich ecosystem</h3>
+
+<p>MAGE provides only the primitives required to write interactive games. However,
+MAGE comes with a rich ecosystem of official and third-party modules that will help
+you add features such as static data management, maintenance management, and so on.</p>
+
+<p>Official MAGE modules can be found on <a href="https://github.com/mage">GitHub</a>. We also
+often showcase external modules (and how to use them) on our
+<a href="https://medium.com/mage-framework">development blog</a>.</p>
+
+<h2 id="features">Features</h2>
+
+<h3 id="typescript-javascript">TypeScript &amp; JavaScript</h3>
+
+<p>MAGE actively supports both JavaScript and TypeScript projects; you can easily choose in which language you wish to create a project, and many tools support both languages.</p>
+
+<h3 id="transactional-api-endpoints">Transactional API endpoints</h3>
+
+<p>This is the core feature of MAGE; it provides you with a
+<a href="#states">State API</a> that helps you create transactional API endpoints.</p>
+
+<p>Transactional API endpoints (named <a href="#user-commands">user commands</a>)
+will allow you to stack all your data mutations and asynchronous messages
+on a state object. This state object will either automatically be commited
+once your API call completes, or rollback if an error occurs.</p>
+
+<h3 id="multiple-storage-backends">Multiple storage backends</h3>
+
+<p>The <a href="#archivist">data storage API</a> allows you to abstract your storage
+backend. Not only it will allow you to access and store data to your
+database of choice, but it will also help you with database migrations
+whenever needed.</p>
+
+<h3 id="built-in-distributed-mode">Built-in distributed mode</h3>
+
+<p>Thanks to the built-in <a href="api.html#service-discovery">service discovery system</a>,
+all you need to do to deploy your game server in a cluster is configure
+the discovery service.</p>
+
+<p>This means that your messages will always be routed to the right server and
+correctly forwarded to the right player.</p>
+
+<h3 id="rich-ecosystem-of-sdks-modules-and-tools">Rich ecosystem of SDKs, modules and tools</h3>
+
+<p>MAGE officially provides client SDKs for both
+<a href="https://github.com/mage/mage-sdk-js">HTML5</a> and
+<a href="https://github.com/mage/mage-sdk-unity">Unity</a> games,
+making it easier than ever to connect your game to your servers.</p>
+
+<p>On top of that, the <a href="https://github.com/mage">mage organization on GitHub</a>
+hosts a wide range of additional tools and modules which can help you
+with various aspects of your MAGE development pipeline.</p>
+
+          <h1 id="requirements">Requirements</h1>
+
+<h2 id="node-js">Node.js</h2>
+
+<aside class="warning">
+MAGE only supports node from version 8.x
+We recommend using the most recent Active LTS version, but we always try to support the Current Release as well.
+
+You can see what the LTS and Current versions are in the Node.js
+<a href="https://github.com/nodejs/Release#release-schedule">release schedule</a>.
+</aside>
+<pre class="highlight shell tab-shell"><code>nvm install 8
+nvm use 8
+</code></pre><pre class="highlight powershell tab-powershell"><code><span class="c1"># You will need to provide the specific version to install and use</span>
+Install-NodeVersion v8.10.0
+<span class="nb">Set</span>-NodeVersion v8.10.0
+</code></pre>
+<p>Node.js (or Node) is essentially JavaScript for servers, and the MAGE platform has been built on it.
+There are some concepts you will most likely benefit from understanding before getting started on a
+serious Node project. Here are some resources which might help you make your first steps on Node:</p>
+
+<ul>
+<li><a href="http://www.nodebeginner.org">The Node Beginner Book</a></li>
+<li><a href="http://nodeschool.io">NodeSchool</a></li>
+<li><a href="http://nodejs.org/api">Node API Documentation</a></li>
+</ul>
+
+<p>We recommend using the following Node.js version manager depending on your platform:</p>
+
+<ul>
+<li>macOS, Linux: <a href="https://github.com/creationix/nvm">NVM</a>.</li>
+<li>Windows: <a href="https://github.com/aaronpowell/ps-nvmw">ps-nvmw</a></li>
+</ul>
+
+<h2 id="npm">NPM</h2>
+
+<blockquote>
+<p>NPM command completion is not available on Windows</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>npm install -g npm@latest
+npm completion &gt;&gt; ~/.bashrc
+
+npm run <span class="o">[</span>tab][tab]
+<span class="c"># Will output: archivist:create   archivist:drop     archivist:migrate  develop  [...]</span>
+</code></pre><pre class="highlight powershell tab-powershell"><code>npm install -g npm@latest
+</code></pre>
+<p>NPM will ship by default with your Node.js installation. However,
+since bugs are fixed in later versions, we strongly recommend
+to periodically update your NPM installation to make sure to
+get all the fixes.</p>
+
+<p>This project, as well as the projects it generates on bootstrap,
+use NPM for all its build task. Therefore, we also recommend
+to set up NPM command completion in your terminal.
+See https://docs.npmjs.com/cli/completion for more details.</p>
+
+          <h1 id="installation">Installation</h1>
+
+<h2 id="naming-your-environment">Naming your environment</h2>
+
+<blockquote>
+<p>You can replace &ldquo;development&rdquo; with something else if you want</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="nb">export </span><span class="nv">NODE_ENV</span><span class="o">=</span>development
+</code></pre><pre class="highlight powershell tab-powershell"><code><span class="nb">set-item </span>env:NODE_ENV<span class="o">=</span>development
+</code></pre>
+<p>When MAGE creates a new project, it will set up a configuration file for your environment. The name
+of your environment is decided by the <code class="prettyprint">NODE_ENV</code> environment variable. If your system administrator
+has not already prepared it for you on the system you are developing on, you can do it yourself by
+adding the above line your shell&rsquo;s profile file (<code class="prettyprint">.bashrc</code>, <code class="prettyprint">.zshrc</code>, <code class="prettyprint">profile.ps1</code>, and so on).</p>
+
+<p>The MAGE installer will create a <code class="prettyprint">development.yaml</code> configuration file, and will use that from there on,
+whenever you start up the game.</p>
+
+<h2 id="setting-up-a-new-mage-project">Setting up a new MAGE project</h2>
+
+<h3 id="as-a-javascript-project">As a JavaScript project</h3>
+
+<blockquote>
+<p>Replace my-gameserver with how you wish to name your game</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="c"># Note: use npx, not npm!</span>
+npx mage create my-gameserver
+<span class="nb">cd </span>my-gameserver
+</code></pre><pre class="highlight powershell tab-powershell"><code><span class="c1"># Note: use npx, not npm!</span>
+npx mage create my-gameserver
+<span class="nb">cd </span>my-gameserver
+</code></pre>
+<blockquote>
+<p>Then use the following command to start your game server (ctrl+c to exit)</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>npm run develop
+</code></pre><pre class="highlight powershell tab-powershell"><code>npm run develop
+</code></pre>
+<p>Running the following steps is the easiest way to create a new project. Do this <strong>from inside an
+empty folder</strong> that is named after the game you are developing.</p>
+
+<p>You can also specify which version you wish to install by adding <code class="prettyprint">@[version number]</code> at
+the end of the line.</p>
+
+<h3 id="as-a-typescript-project">As a TypeScript project</h3>
+<pre class="highlight shell tab-shell"><code><span class="c"># Note: use npx, not npm!</span>
+npx mage create my-gameserver --typescript
+<span class="nb">cd </span>my-gameserver
+</code></pre><pre class="highlight powershell tab-powershell"><code>npx mage create my-gameserver --typescript
+<span class="nb">cd </span>my-gameserver
+</code></pre>
+<p>MAGE can also create TypeScript projects; to do so, all you need to do is to
+add the <code class="prettyprint">typescript</code> or <code class="prettyprint">ts</code> flag to the previous command.</p>
+
+<h2 id="upgrading-mage-in-an-existing-project">Upgrading MAGE in an existing project</h2>
+
+<blockquote>
+<p>In some cases, you may want to <code class="prettyprint">npm run clean</code> first.</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>npm install --save mage@1.2.3
+</code></pre><pre class="highlight powershell tab-powershell"><code>npm install --save mage@1.2.3
+</code></pre>
+<p>To upgrade to a new version of MAGE, simply re-run install with the <code class="prettyprint">--save</code> flag,
+and specify the version you wish to now use.</p>
+
+<h2 id="versioning-of-mage">Versioning of MAGE</h2>
+
+<p>MAGE version numbering follows <a href="http://semver.org/">Semantic Versioning</a> or &ldquo;semver&rdquo; logic.</p>
+
+<p>That means that given a version number MAJOR.MINOR.PATCH, we increment the:</p>
+
+<ul>
+<li>MAJOR version when we make incompatible API changes,</li>
+<li>MINOR version when we add functionality in a backwards-compatible manner, and</li>
+<li>PATCH version when we make backwards-compatible bug fixes.</li>
+</ul>
+
+<h2 id="working-with-master-latest-and-development">Working with master (latest) and development</h2>
+
+<aside class="warning">
+The master branch will be frequently updated, which may end up breaking your application.
+You should try to avoid using this pre-release version, and instead use a versioned
+copy of MAGE for your project.
+</aside>
+<pre class="highlight shell tab-shell"><code>npm install --save mage/mage#master
+</code></pre><pre class="highlight powershell tab-powershell"><code>npm install --save mage/mage#master
+</code></pre>
+<p>You may choose, for the duration of your application development, to work on a pre-release version
+of MAGE. To do so, you can use the <code class="prettyprint">master</code> branch when running <code class="prettyprint">npm install</code>.</p>
+
+          <h1 id="api-reference">API Reference</h1>
+
+<p>Before you jump into the API documentation, you will most likely want
+to read through this document so to get familiar with the basics of MAGE.</p>
+
+<p><a href="./api/">API documentation</a></p>
+
+          <h1 id="client-sdks">Client SDKs</h1>
+
+<p>The following client SDKs are currently available to connect your
+game client to a MAGE server:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Language</th>
+<th>Location</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mage-js-sdk</td>
+<td>JavaScript (browser)</td>
+<td><a href="https://github.com/mage/mage-sdk-js">GitHub</a></td>
+</tr>
+<tr>
+<td>mage-sdk-unity</td>
+<td>C# (For Unity)</td>
+<td><a href="https://github.com/mage/mage-sdk-unity">GitHub</a></td>
+</tr>
+</tbody></table>
+
+<p>Some SDKs may have optional sub-libraries to be installed depending on which MAGE
+functionality your game will be using.</p>
+
+          <h1 id="configuration">Configuration</h1>
+
+<h2 id="format">Format</h2>
+
+<p>The configuration for your game is allowed to exist in the
+<a href="http://en.wikipedia.org/wiki/YAML">YAML format</a> with the <code class="prettyprint">.yaml</code> file extension, the
+<a href="http://en.wikipedia.org/wiki/JSON">JSON format</a> with the <code class="prettyprint">.json</code> file extension, or the
+<a href="http://json5.org/">JSON5 format</a> with the <code class="prettyprint">.json5</code> file extension.</p>
+
+<p>In a nutshell, YAML is the more human readable format, while JSON is more JavaScript-like in how it
+represents its variable types. JSON5 represents a good middle-ground between both previous formats.</p>
+
+<h2 id="location">Location</h2>
+
+<blockquote>
+<p>config/</p>
+</blockquote>
+<pre class="highlight plaintext tab-plaintext"><code>config
+├── custom.yaml
+├── default.yaml
+├── development.yaml
+└── production.yaml
+</code></pre>
+<p>The files are located in your game&rsquo;s <code class="prettyprint">config</code> folder.</p>
+
+<p>Configuration files will be loaded in the following order:</p>
+
+<ol>
+<li><code class="prettyprint">config/default.yaml</code>: The base configuration file for your project</li>
+<li><code class="prettyprint">config/[NODE_ENV].yaml</code>: Configuration for a specific environment</li>
+<li><code class="prettyprint">config/custom.yaml</code>: Configuration for your local setup</li>
+</ol>
+
+<p>If you want to load multiple configuration files, you may comma-separate them in your <code class="prettyprint">NODE_ENV</code>
+like this: <code class="prettyprint">NODE_ENV=bob,test</code>. They will be loaded in order, the latter overriding the former.</p>
+
+<p>Custom configuration is generally used during development; in some cases, developers will need
+to specify their own credentials or personalized configuration. Newly created projects will
+include a custom file; however, this file will also be added to your <code class="prettyprint">.gitignore</code> file to
+avoid any conflicts between each developer&rsquo;s configuration.</p>
+
+<h2 id="development">Development</h2>
+
+<aside class="warning">
+Make sure these are turned off on your production environments!
+</aside>
+
+<blockquote>
+<p>This turns on all options</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">developmentMode</span><span class="pi">:</span> <span class="s">true</span>
+</code></pre>
+<blockquote>
+<p>Alternatively, take control by toggling the individual options. The ones you leave out are
+considered to be set to true. Set any of the following to false to change the default
+development mode behavior.</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">developmentMode</span><span class="pi">:</span>
+    <span class="na">archivistInspection</span><span class="pi">:</span> <span class="s">true</span>  <span class="c1"># Archivist will do heavy sanity checks on queries and mutations.</span>
+</code></pre>
+<p>To run your game in development, MAGE has a <code class="prettyprint">developmentMode</code> configuration flag. This enables or
+disables certain behaviors which make development a bit more convenient. If you want more granular
+control over which of these behaviors are turned on or off, you can specify them in an object.</p>
+
+<h2 id="environment-based-configuration">Environment-based configuration</h2>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">clientHost</span><span class="pi">:</span>
+      <span class="na">bind</span><span class="pi">:</span> <span class="s">MAGE_APP_BIND:string</span>
+
+    <span class="na">mmrp</span><span class="pi">:</span> <span class="s">MAGE_APP_MMRP:bool</span>
+</code></pre>
+<p>You may also add a <code class="prettyprint">config/environment.yaml</code> file to your project: this file serves
+as a means to connect environment variables to specific configuration entries. Environment
+variables will supersede any configuration set through configuration files.</p>
+
+<p>In this example, we connect <code class="prettyprint">MAGE_APP_BIND</code> and <code class="prettyprint">MAGE_APP_MMRP</code> to our configuration.
+Note you may also optionally specify the type to cast the environment variable into.
+In this case for instance, we set <code class="prettyprint">MAGE_APP_MMRP</code> as a boolean because we might want to
+disable MMRP it by running <code class="prettyprint">MAGE_APP_MMRP=false npm run mage</code> or otherwise setting
+the value into the environment.</p>
+
+<h2 id="dynamic-configuration">Dynamic configuration</h2>
+
+<blockquote>
+<p>test/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage/lib/config'</span><span class="p">);</span>
+<span class="nx">config</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'some.path.to.config'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="kr">const</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="c1">// continue with your test code</span>
+</code></pre>
+<p>The moment <code class="prettyprint">mage</code> is required or imported, it will automatically set up
+the configuration management API as well as read configuration files. However,
+in some cases - such as unit testing - you might want to forcibly disable
+certain services, or enforce fixed behaviors.</p>
+
+<p>To do so, you have the option of requiring MAGE&rsquo;s configuration before,
+fix your configuration; once you require MAGE, your dynamic configuration
+will then be applied.</p>
+
+<p>You may dynamically set a new configuration at any time while the MAGE server is
+running; however, keep in mind that most modules only read configuration entries
+at runtime, and therefore dynamically changing the configuration after MAGE has
+been initialized will likely not have any effects.</p>
+
+          <h1 id="modules">Modules</h1>
+
+<h2 id="external-helper-modules">External helper modules</h2>
+
+<p>External helpers modules are optional but simplify the use of the library.
+They are different from mage built-in modules and user modules: they don&rsquo;t expose usercommands, they just act as helpers.</p>
+
+<p>Here are the most important:</p>
+
+<table><thead>
+<tr>
+<th>Module</th>
+<th>Description</th>
+<th>TypeScript library</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="https://github.com/mage/mage-console">mage-console</a></td>
+<td>Mage development console with <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a> interface and auto-reload on file change</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mage/mage-validator">mage-validator</a></td>
+<td>Validation system for MAGE topics and user command input types</td>
+<td>✔</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mage/mage-module-shard">mage-module-shard</a></td>
+<td>Helps you to implement modules that act as shards within a MAGE cluster</td>
+<td>✔</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mage/mage-vaulthelper-couchbase">mage-vaulthelper-couchbase</a></td>
+<td>Helps you to access mage Couchbase backend</td>
+<td>✔</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mage/mage-module-maintenance">mage-module-maintenance</a></td>
+<td>Helps you implement a maintenance mode for your game cluster</td>
+<td>✔</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mage/mage-https-devel">mage-https-devel</a></td>
+<td>Toolchain for enabling the use of HTTPS during local development</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="built-in-modules">Built-in modules</h2>
+
+<blockquote>
+<p>lib/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="c1">// Default modules with a fresh mage install</span>
+<span class="c1">// (with npx mage create [game name])</span>
+<span class="nx">mage</span><span class="p">.</span><span class="nx">useModules</span><span class="p">([</span>
+  <span class="s1">'archivist'</span><span class="p">,</span>
+  <span class="s1">'config'</span><span class="p">,</span>
+  <span class="s1">'logger'</span><span class="p">,</span>
+  <span class="s1">'session'</span><span class="p">,</span>
+  <span class="s1">'time'</span>
+<span class="p">]);</span>
+
+</code></pre>
+<p>In the mage library, some modules are already created to provide some facilities such as session and authentication. The full list of available modules is defined as below:</p>
+
+<table><thead>
+<tr>
+<th>Module</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>archivist</td>
+<td>Expose usercommands to synchronize data in real time</td>
+</tr>
+<tr>
+<td>config</td>
+<td>Expose client config with a usercommand</td>
+</tr>
+<tr>
+<td><a href="#auth-module">auth</a></td>
+<td>Authentication facility</td>
+</tr>
+<tr>
+<td><a href="#logging">logger</a></td>
+<td>Logging facility</td>
+</tr>
+<tr>
+<td><a href="#session-module">session</a></td>
+<td>Session facility</td>
+</tr>
+<tr>
+<td><a href="#time-manipulation">time</a></td>
+<td>Time manipulation facility</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Note that the built-in archivist module is different from <a href="#archivist">Archivist</a> defined later.
+</aside>
+
+<p>To see the default modules on a fresh install of mage and how they can be set up, see the example on the right side.
+Note that the <code class="prettyprint">auth</code> module is <strong>not activated by default</strong>.</p>
+
+<h3 id="set-up-the-auth-module">Set up the auth module</h3>
+
+<p>To set up the auth module, adding it to <code class="prettyprint">mage.useModules</code> is not sufficient, a basic configuration is needed.
+See the example on the right side for a basic configuration.</p>
+
+<p>Here are the different hash types you can use:</p>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pbkdf2</td>
+<td><a href="https://en.wikipedia.org/wiki/PBKDF2">pbkdf2 algorithm</a></td>
+</tr>
+<tr>
+<td>hmac</td>
+<td><a href="https://en.wikipedia.org/wiki/HMAC">hmac algorithm</a></td>
+</tr>
+<tr>
+<td>hash</td>
+<td>Basic hash</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p><code class="prettyprint">lib/index.js</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mage</span><span class="p">.</span><span class="nx">useModules</span><span class="p">([</span>
+  <span class="s1">'auth'</span>
+<span class="p">]);</span>
+</code></pre>
+<blockquote>
+<p>lib/archivist/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="c1">// a valid topic with ['username'] as an index</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">auth</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">index</span><span class="p">:</span> <span class="p">[</span><span class="s1">'username'</span><span class="p">],</span>
+  <span class="na">vaults</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">myDataVault</span><span class="p">:</span> <span class="p">{}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+<blockquote>
+<p>config/default.yaml</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">module</span><span class="pi">:</span>
+    <span class="na">auth</span><span class="pi">:</span>
+        <span class="c1"># this should point to the topic you created</span>
+        <span class="na">topic</span><span class="pi">:</span> <span class="s">auth</span>
+
+        <span class="c1"># configure how user passwords are stored, the values below are the</span>
+        <span class="c1"># recommended default</span>
+        <span class="na">hash</span><span class="pi">:</span>
+            <span class="c1"># Please see https://en.wikipedia.org/wiki/PBKDF2 for more information</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">pbkdf2</span>
+            <span class="na">algorithm</span><span class="pi">:</span> <span class="s">sha256</span>
+            <span class="na">iterations</span><span class="pi">:</span> <span class="s">10000</span>
+</code></pre><pre class="highlight yaml tab-yaml"><code>        <span class="na">hash</span><span class="pi">:</span>
+          <span class="c1"># Please see https://en.wikipedia.org/wiki/HMAC for more information</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">hmac</span>
+          <span class="na">algorithm</span><span class="pi">:</span> <span class="s">sha256</span>
+          <span class="c1"># Hex key of any length</span>
+          <span class="na">key</span><span class="pi">:</span> <span class="s">89076d50860489076d508604</span>
+</code></pre><pre class="highlight yaml tab-yaml"><code>        <span class="na">hash</span><span class="pi">:</span>
+          <span class="c1"># Basic hash</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">hash</span>
+          <span class="na">algorithm</span><span class="pi">:</span> <span class="s">sha1</span>
+</code></pre>
+<h2 id="file-structure">File structure</h2>
+<pre class="highlight plaintext tab-plaintext"><code>mygame/
+  lib/
+    modules/
+      players/    -- the name of our module
+        index.js  -- the entry point of the module
+        usercommands/
+          login.js  -- the user command we use to login
+</code></pre>
+<p>Modules are a way to separate concerns; they contain groups of
+functionality for a certain subject (users, ranking, shop, etc),
+and expose API (called user commands) that are accessible through
+the different client SDKs.</p>
+
+<h2 id="module-setup-and-teardown">Module setup and teardown</h2>
+
+<blockquote>
+<p>lib/modules/players/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">setup</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// load some data</span>
+  <span class="nx">callSomething</span><span class="p">(</span><span class="s1">'someData'</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">teardown</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// load some data</span>
+  <span class="nx">callSomething</span><span class="p">(</span><span class="s1">'someData'</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre>
+<p>MAGE modules can optionally have the two following hooks:</p>
+
+<ul>
+<li><strong>setup</strong>: When the server is started</li>
+<li><strong>teardown</strong>: When the server is about to be stopped</li>
+</ul>
+
+<p>The setup function will run when MAGE boots up allowing your module
+to prepare itself, for example by loading vital information from a data store into memory.
+This function is optional, so if you do not have a setup phase, you don&rsquo;t need to add it.</p>
+
+<p>Teardown functions in a similar way; you may want to store to database
+some data you have been keeping in memory, or send some notifications to your users.</p>
+
+<p>Note that by default, each hook will have 5000 milliseconds to complete; should you need
+longer than that, you will need to set <code class="prettyprint">exports.setupTimeout</code> and <code class="prettyprint">exports.teardownTimeout</code>
+respectively to the value of your choice.</p>
+
+<h2 id="module-methods">Module methods</h2>
+
+<blockquote>
+<p>lib/modules/players/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">register</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">acl</span><span class="p">:</span> <span class="p">[</span><span class="s1">'user'</span><span class="p">]</span>
+  <span class="p">};</span>
+
+  <span class="nx">mage</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="p">{</span> <span class="nx">options</span> <span class="p">},</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre>
+<p>You will then want to add methods to your modules. These are different from your API endpoints;
+they are similar to model methods in an MVC framework, but they are not attached to an object
+instance.</p>
+
+<p>This example shows how you could create a quick player registration method.</p>
+
+<h2 id="user-commands">User commands</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/register.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="c1">// Who can access this API?</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+
+<span class="c1">// The API endpoint function</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">mage</span><span class="p">.</span><span class="nx">players</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">userId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">state</span><span class="p">.</span><span class="nx">respond</span><span class="p">(</span><span class="nx">userId</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nx">callback</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre>
+<p>User commands are the endpoints which the game client will be accessing. They define
+what class of users may access them, and what parameters are acceptable.</p>
+
+<p>The name of a user command is composed of its module name and the name of the file.
+For instance, in the example here, the name of the user command would be <code class="prettyprint">players.register</code>.
+The parameters this user command accepts are everything between the <code class="prettyprint">state</code> parameter and the
+<code class="prettyprint">callback</code> parameter; so in this case, <code class="prettyprint">players.register</code> accepts a <code class="prettyprint">username</code> parameter, and
+a <code class="prettyprint">password</code> parameter.</p>
+
+<p>Our user command also receives a state object. We won&rsquo;t describe exactly what states are used
+for yet, but we can see that they are to be used to respond with an error should one occur.</p>
+
+<h2 id="testing-your-user-command">Testing your user command</h2>
+<pre class="highlight shell tab-shell"><code>npm run archivist:create
+npm run develop
+</code></pre><pre class="highlight powershell tab-powershell"><code>npm run archivist:create
+npm run develop
+</code></pre>
+<p>Before we try to test the code above, we will first need to create a place for the auth module
+to store the data. <code class="prettyprint">archivist:create</code> will do just that.</p>
+
+<p>Once this command completes, we&rsquo;ll start our MAGE project in development mode.</p>
+
+<blockquote>
+<p>In a separate terminal window</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST http://127.0.0.1:8080/game/players.register <span class="se">\</span>
+--data-binary @- <span class="sh">&lt;&lt; EOF
+[]
+{"username": "test","password": "secret"}
+EOF
+</span></code></pre><pre class="highlight powershell tab-powershell"><code> Invoke-RestMethod -Method Post -Uri <span class="s2">"http://127.0.0.1:8080/game/players.register"</span> -Body <span class="s1">'[]
+{"username": "username", "password": "password"}'</span> | ConvertTo-Json
+</code></pre>
+<p>For testing most user commands in MAGE, you would normally need to use one
+of the <a href="#client-sdks">client SDKs</a>; however, this example is simple enough
+for us to be able to simply query the endpoint manually.</p>
+
+<p>You may notice that the content we send is in line-separated JSON format, and
+that the first thing we send is an empty array; this array, under normal
+circumstances, would contain credentials and other metadata.</p>
+
+<h2 id="login">Login</h2>
+
+<blockquote>
+<p>lib/modules/players/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">register</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">acl</span><span class="p">:</span> <span class="p">[</span><span class="s1">'user'</span><span class="p">]</span>
+  <span class="p">};</span>
+
+  <span class="nx">mage</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span>  <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">userId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">mage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s1">'Logging in as'</span><span class="p">,</span> <span class="nx">userId</span><span class="p">);</span>
+
+    <span class="nx">mage</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre>
+<p>Now that we can register users, we may want to automatically log in the user by calling
+<code class="prettyprint">mage.auth.login</code>. While the registration has not been completed in the database, our <code class="prettyprint">state</code>
+transaction contains the information for the newly registered user, which will allow for
+<code class="prettyprint">login</code> to complete successfully.</p>
+
+<p>For more information about the <code class="prettyprint">auth</code> module, please refer to the
+<a href="https://mage.github.io/mage/api/classes/mage.html#auth">API documentation</a>.</p>
+
+<h2 id="acls">ACLs</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/notAccessibleToNormalUers.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="c1">// Who can access this API?</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'special'</span><span class="p">];</span>
+
+<span class="c1">// [...]</span>
+</code></pre>
+<p>As you may have noticed, <code class="prettyprint">mage.auth.register</code> receives and <code class="prettyprint">acl</code> option allowing
+to attach to a give user different access rights. User commands can then in return
+list what ACL groups are allowed to acces that user command.</p>
+
+<p>For instance, in the example above, a user registered only with the <code class="prettyprint">user</code> credential
+would not be allowed to execute this user command. Only if the &lsquo;user&rsquo; or &lsquo;*&rsquo; wildcard ACL
+were added to the <code class="prettyprint">exports.acl</code> array would a normal user be able to execute it.</p>
+
+<p>By standard, <code class="prettyprint">user</code> is assigned to any registered player, but you may create your own ACL
+groups as you see fit.</p>
+
+<h2 id="user-command-timeout">User command timeout</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/register.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="c1">// Who can access this API?</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">timeout</span> <span class="o">=</span> <span class="mi">200</span>
+
+<span class="c1">// [...]</span>
+</code></pre>
+<p>By default, user command execution will time out after 15,000 milliseconds; however,
+in some cases, you may want to increase or reduce that value.</p>
+
+<p>To do so, simply set <code class="prettyprint">exports.timeout</code> to your desired value.</p>
+
+<p>Keep in mind that the execution of your usercommand may not get interrupted;
+we will return an error on the next access to the user command&rsquo;s <code class="prettyprint">state</code>
+(which will in turn ensure that execution is interrupted), but manual operations
+unrelated to <code class="prettyprint">state</code> may still complete.</p>
+
+<h2 id="request-caching">Request caching</h2>
+<pre class="highlight shell tab-shell"><code>curl -X POST http://127.0.0.1:8080/game/players.checkStats?queryId<span class="o">=</span>1 <span class="se">\</span>
+--data-binary @- <span class="sh">&lt;&lt; EOF
+[{"key":"be20d767-4067-40d6-92dc-c52067b7d21e:lMftdnXxEFbP3ctq","name":"mage.session"}]
+{}
+EOF
+</span></code></pre><pre class="highlight powershell tab-powershell"><code> Invoke-RestMethod -Method Post -Uri <span class="s2">"http://127.0.0.1:8080/game/players.checkStats?queryId=1"</span> -Body <span class="s1">'[{"key":"be20d767-4067-40d6-92dc-c52067b7d21e:lMftdnXxEFbP3ctq","name":"mage.session"}]
+{}'</span> | ConvertTo-Json
+</code></pre>
+<p>By default, responses to requests from authenticated users which
+contain a numerical identifier in the will be automatically cached;
+this is so to avoid double-execution when the client disconnects before
+the response could be sent and the client wishes to retry.</p>
+
+<p>This comes handy for most operations (trades, purchases and so on),
+but may be undesirable in some circumstances (when you serve computed
+static data or static data stored in the database).</p>
+
+<blockquote>
+<p>lib/modules/players/usercommands/checkStats.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">cache</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</code></pre>
+<p>To disable this behavior, simply set <code class="prettyprint">cache</code> to false
+in your user command&rsquo;s definition.</p>
+
+<h2 id="using-async-await-node-7-6">Using async/await (Node 7.6+)</h2>
+
+<aside class="notice">
+If you are using Node.js 7 but older than 7.6, you can still use
+async/await by adding [enable-async](https://www.npmjs.com/package/enable-async)
+to your project.
+</aside>
+
+<blockquote>
+<p>lib/modules/players/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">promisify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'es6-promisify'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="p">{</span>
+  <span class="nx">auth</span>
+<span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">register</span> <span class="o">=</span> <span class="nx">async</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">acl</span><span class="p">:</span> <span class="p">[</span><span class="s1">'user'</span><span class="p">]</span>
+  <span class="p">};</span>
+
+  <span class="kr">const</span> <span class="nx">register</span> <span class="o">=</span> <span class="nx">promisify</span><span class="p">(</span><span class="nx">auth</span><span class="p">.</span><span class="nx">register</span><span class="p">,</span> <span class="nx">auth</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre>
+<blockquote>
+<p>lib/modules/players/usercommands/register.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="p">{</span>
+  <span class="nx">players</span>
+<span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">acl</span><span class="p">:</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">],</span>
+  <span class="nx">async</span> <span class="nx">execute</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">players</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+<blockquote>
+<p>lib/modules/players/usercommands/staticData.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">serialize</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">acl</span><span class="p">:</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">],</span>
+  <span class="nx">async</span> <span class="nx">execute</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">'{"static": "data"}'</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+<p>If you are using a newer Node.js version, which includes the latest ES2015 and ES2017
+language features, you can rewrite the previous API as follows. As you can see, this results not
+only in much fewer lines of code, but also into a much simpler, easier to read code.</p>
+
+<p>Let&rsquo;s review what we have done here:</p>
+
+<ol>
+<li>Variable declaration using <code class="prettyprint">const</code>, which prohibits the variable to be rebound;</li>
+<li>Destructuring, to extract the specific MAGE modules and components we want to use;</li>
+<li>async/await and Promises, to simplify the expression of asynchronous code paths;</li>
+</ol>
+
+<p>Note that due to legacy, most of MAGE&rsquo;s API are callback-based, which can sometimes conflict with
+the latest Promise-based API&rsquo;s; to help with this, we recommend that you install
+<a href="https://www.npmjs.com/package/es6-promisify">es6-promisify</a> in your project, and then use it to
+wrap the different MAGE APIs you wish to use.</p>
+
+<p>Also, you can see that the <code class="prettyprint">players.staticData</code> user command serializes data by itself to JSON
+instead of relying on MAGE to serialize the return data. This can be useful when you wish to optimize how MAGE
+will serve certain pieces of data which will not change frequently. When you wish to do so, simply make
+sure that <code class="prettyprint">exports.serialize</code> is set to <code class="prettyprint">false</code>, and to manually return a stringified version of your
+data.</p>
+
+<h2 id="error-management">Error management</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/register.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="p">{</span>
+  <span class="nx">players</span><span class="p">,</span>
+  <span class="nx">MageError</span>
+<span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="kr">class</span> <span class="nx">NoHomersError</span> <span class="kr">extends</span> <span class="nx">MageError</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+
+    <span class="c1">// Code to return to the client (default: server)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">code</span> <span class="o">=</span> <span class="s1">'server'</span><span class="p">;</span>
+
+    <span class="c1">// Log level to use to log this error (default: error)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">level</span> <span class="o">=</span> <span class="s1">'warning'</span><span class="p">;</span>
+
+    <span class="c1">// Details to log alongside the message (default: undefined)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">details</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">details</span><span class="p">;</span>
+
+    <span class="c1">// Error type - traditionally the class name</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">'NoHomersError'</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">acl</span><span class="p">:</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">],</span>
+  <span class="nx">async</span> <span class="nx">execute</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">username</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Using MageError directly</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nx">MageError</span><span class="p">({</span>
+        <span class="na">code</span><span class="p">:</span> <span class="s1">'username_length_exceeded'</span><span class="p">,</span>
+        <span class="na">level</span><span class="p">:</span> <span class="s1">'warning'</span><span class="p">,</span>
+        <span class="na">message</span><span class="p">:</span> <span class="s1">'Username is more than 10 character'</span><span class="p">,</span>
+        <span class="na">details</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">received</span><span class="p">:</span> <span class="nx">username</span>
+        <span class="p">}</span>
+      <span class="p">})</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">username</span> <span class="o">===</span> <span class="s1">'homer'</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Using a custom error class inheriting MageError</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nx">NoHomersError</span><span class="p">({</span>
+        <span class="na">message</span><span class="p">:</span> <span class="s1">'We already have one Homer anyway '</span>
+      <span class="p">})</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">await</span> <span class="nx">players</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+<p>When using <code class="prettyprint">async/await</code>, you will want to customise the behavior of your errors
+in regards to how they will be logged, what data will be logged, what message will be
+returned to the user, and so on.</p>
+
+<p>To do so, MAGE provides the <code class="prettyprint">MageError</code> error class, which can be used as-is or
+extended as needed. This error class will allow you to control precisely what you will
+log in case of error, and what should be returned to the user.</p>
+
+          <h1 id="states">States</h1>
+
+<p>You may notice that our user commands receive an object called <code class="prettyprint">state</code>
+as part of the argument list.</p>
+
+<h2 id="transaction-management">Transaction management</h2>
+
+<p>States are used for tracking the state of a current user command execution. For instance,
+you will generally have to do a series of operations which, depending on the overall outcome
+of your user command execution, should all be stored (or all discarded if a failure occurs).
+States provide the mechanism for stacking operations which need to occur, and then commit
+them in one shot.</p>
+
+<h2 id="transactional-storage">Transactional storage</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/registerManyBroken.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">credentialsOne</span><span class="p">,</span> <span class="nx">credentialsTwo</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mage</span><span class="p">.</span><span class="nx">players</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">credentialsOne</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">mage</span><span class="p">.</span><span class="nx">players</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">credentialsTwo</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">error</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'Whoops this failed!'</span><span class="p">);</span>
+            <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+</code></pre>
+<p>In the example here, we basically error out on purpose, but the purpose is clear:
+we are trying to register two new users. However, because we end up calling <code class="prettyprint">state.error</code>
+the actions will not be executed; the two <code class="prettyprint">mage.players.register</code> calls we have made
+would only store information if the call succeded.</p>
+
+<p>For more information about the API you use to access your data store, please read the
+<a href="./api/classes/archivist.html">Archivist</a> API documentation.</p>
+
+<h2 id="transactional-event-emission">Transactional event emission</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/registerAndNotifyFriend.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">credentials</span><span class="p">,</span> <span class="nx">friendId</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">state</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="nx">friendId</span><span class="p">,</span> <span class="s1">'friendJoined'</span><span class="p">,</span> <span class="nx">credentials</span><span class="p">.</span><span class="nx">username</span><span class="p">);</span>
+
+    <span class="nx">mage</span><span class="p">.</span><span class="nx">players</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">credentials</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="nx">callback</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+</code></pre>
+<p>The state object is also responsible for emitting events for players. The event system is what
+enables the MAGE server and MAGE clients to stay synchronized, and is also the first-class
+communication interface to get players to send data between each others.</p>
+
+<p>Events also benefit of the transactional nature of states; events to be sent to users
+will not be sent unless the call succeeds. For instance, in this example, if <code class="prettyprint">mage.players.register</code>
+were to return an error, the event emitted by <code class="prettyprint">state.emit</code> would never be sent to the other
+player referenced by <code class="prettyprint">playerId</code>.</p>
+
+<p>For more information on the State API and how events are emitted, please read the
+<a href="./api/interfaces/mage.core.istate.html">State</a> API documentation.</p>
+
+          <h1 id="actors-sessions">Actors &amp; Sessions</h1>
+
+<p>MAGE defines users as &ldquo;actors&rdquo;, who are represented by an ID (the Actor ID).</p>
+
+<p>For an actor to make changes to the database (through a user command) and send events to other users,
+it will generally need to be authenticated. During authentication, an actor starts a session and
+is assigned a unique session ID.</p>
+
+<p>As long as a session ID is used and reused by an actor, it will stay active. After a long period
+of non-activity however, the session will expire and the actor will be &ldquo;logged out&rdquo; as it were.</p>
+
+<h2 id="session-module">Session module</h2>
+
+<blockquote>
+<p><code class="prettyprint">lib/index.js</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mage</span><span class="p">.</span><span class="nx">useModules</span><span class="p">([</span>
+  <span class="s1">'session'</span>
+<span class="p">]);</span>
+</code></pre>
+<p>Freshly bootstrapped MAGE applications already have the session module activated and configured (including a basic Archivist configuration which will store session-information in memory).</p>
+
+<p>For multi-node MAGE clusters, make sure to change the vault used for sessions to be stored
+in a shared memory storage solution such as memcached, redis, etc&hellip; Since MAGE will need
+to retrieve sessions to route messages to them properly.</p>
+
+<h2 id="auth-module">Auth module</h2>
+
+<p>Once configured you can just add the <code class="prettyprint">auth</code> module to your <code class="prettyprint">useModules</code> call.
+Please see <a href="##built-in-modules">built-in modules</a> part to see how to set up the auth module.</p>
+
+<h2 id="logging-in">Logging in</h2>
+
+<blockquote>
+<p>lib/modules/players/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">login</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">mage</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre>
+<blockquote>
+<p>lib/modules/players/usercommands/login.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">logger</span> <span class="o">=</span> <span class="nx">mage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">context</span><span class="p">(</span><span class="s1">'players'</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+
+<span class="c1">// The API endpoint function</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">mage</span><span class="p">.</span><span class="nx">players</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">session</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">logger</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s1">'Logged in user:'</span><span class="p">,</span> <span class="nx">session</span><span class="p">.</span><span class="nx">actorId</span><span class="p">);</span>
+    <span class="nx">callback</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre>
+<p>The auth module allows us to login. For now, let&rsquo;s not bother with user accounts and use the
+anonymous login ability instead. As long as we do this as a developer (in development mode),
+we can login anonymously and get either user-level or even administrator-level privileges.
+In production that would be impossible, and running the same logic would result in &ldquo;anonymous&rdquo;
+privileges only. You wouldn&rsquo;t be able to do much with that.</p>
+
+<p>The session module will have automatically picked up the session ID that has been assigned to us,
+so there is nothing left for us to do.</p>
+
+<p>When you are ready to create user accounts, please read on about how to use and configure the
+<a href="https://github.com/mage/mage/tree/master/lib/modules/auth">auth module</a>.</p>
+
+<h3 id="testing-your-login-user-command">Testing your login user command</h3>
+<pre class="highlight shell tab-shell"><code>curl -X POST http://127.0.0.1:8080/game/players.login <span class="se">\</span>
+--data-binary @- <span class="sh">&lt;&lt; EOF
+[]
+{"username": "test","password": "secret"}
+EOF
+</span></code></pre><pre class="highlight powershell tab-powershell"><code> Invoke-RestMethod -Method Post -Uri <span class="s2">"http://127.0.0.1:8080/game/players.login"</span> -Body <span class="s1">'[]
+{"username": "test", "password": "secret"}'</span> | ConvertTo-Json
+</code></pre>
+<p>If authentication fails, you will receive <code class="prettyprint">[[&quot;invalidUsernameOrPassword&quot;,null]]</code>;
+otherwise, you should get back an event object containing your player&rsquo;s session information.</p>
+
+<h2 id="changing-the-password">Changing the password</h2>
+
+<p>You can change the password for a given user after registration. It works the same way as registration, except
+that the user ID needs to exist or you will get a <code class="prettyprint">UserNotFoundError</code>. Note that this does not invalidate current
+sessions for this account.</p>
+
+<blockquote>
+<p>lib/modules/players/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">changePassword</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">newPassword</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">mage</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">changePassword</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">newPassword</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre>
+          <h1 id="archivist">Archivist</h1>
+
+<p>Archivist is a key-value abstraction layer generally used with state objects.</p>
+
+<p>The player module created through the previous sections already uses Archivist
+to store data on the local file system; more specifically, the auth module used
+in the <a href="./#actors-sessions">Actors &amp; Sessions</a> section of this user guide
+uses Archivist behind the scenes to store credentials for newly created users.</p>
+
+<h2 id="vaults">Vaults</h2>
+
+<aside class="warning">
+Never configure multiple vaults to connect to the same vault backend storage!
+This would break how [migration scripts](#migrations) work.
+</aside>
+
+<aside class="warning">
+Not all vaults support every operations! Below you will find
+a short configuration description for each available vault backends
+alongside a list of supported operations for that backend.
+</aside>
+
+<h3 id="list-read-and-write-order">List, read and write order</h3>
+
+<blockquote>
+<p>./config/default.yaml</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">archivist</span><span class="pi">:</span>
+    <span class="c1"># When doing "list" operations, will attempt each mentioned vault until successful</span>
+    <span class="na">listOrder</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">userVault</span>
+        <span class="pi">-</span> <span class="s">itemVault</span>
+
+    <span class="c1"># When doing "get" operations, will attempt each mentioned vault until successful</span>
+    <span class="na">readOrder</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">userVault</span>
+        <span class="pi">-</span> <span class="s">itemVault</span>
+
+    <span class="c1"># When doing "add/set/touch/del" operations, will write to each mentioned vault in the given order</span>
+    <span class="na">writeOrder</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">userVault</span>
+        <span class="pi">-</span> <span class="s">itemVault</span>
+</code></pre>
+<p>listOrder, readOrder, and writeOrder properties <strong>have to</strong> be defined in your configuration file to specify the order when reading or writting data.<br>
+For read operations (listOrder, readOrder), mage will attempt the mentioned vaults until one is successful. However, for write operations (writeOrder), mage will write to each mentioned vault, in the given order.</p>
+
+<blockquote>
+<p>The item won&rsquo;t be written before the player because it will follow the order of the writeOrder configuration</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">state</span><span class="p">.</span><span class="nx">archivist</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'item'</span><span class="p">,</span> <span class="p">{</span> <span class="na">userId</span><span class="p">:</span> <span class="nx">userId</span> <span class="p">},</span> <span class="nx">playerData</span><span class="p">);</span>
+<span class="nx">state</span><span class="p">.</span><span class="nx">archivist</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'player'</span><span class="p">,</span> <span class="p">{</span> <span class="na">itemId</span><span class="p">:</span> <span class="nx">itemId</span> <span class="p">},</span> <span class="nx">itemData</span><span class="p">);</span>
+</code></pre>
+<p>Please note that if you are doing multiple operations in a single state transaction, the order in which the operations will be done correspond to the order provided by your configuration, not the order of the actual calls.</p>
+
+<h3 id="vaults-types">Vaults types</h3>
+
+<blockquote>
+<p>./config/default.yaml</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">archivist</span><span class="pi">:</span>
+    <span class="na">vaults</span><span class="pi">:</span>
+        <span class="na">userVault</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">file</span>
+            <span class="na">config</span><span class="pi">:</span>
+                <span class="na">path</span><span class="pi">:</span> <span class="s">./filevault/userVault</span>
+        <span class="na">itemVault</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">file</span>
+            <span class="na">config</span><span class="pi">:</span>
+                <span class="na">path</span><span class="pi">:</span> <span class="s">./filevault/itemVault</span>
+</code></pre>
+<p>As mentioned, vaults are used by archivist to store data. Currently, the following backend
+targets are supported:</p>
+
+<table><thead>
+<tr>
+<th>Backend</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>file</td>
+<td>Store data to the local disk, in JSON files.</td>
+</tr>
+<tr>
+<td>memory</td>
+<td>Keep data in memory (does not persist).</td>
+</tr>
+<tr>
+<td>client</td>
+<td>Special vault type (client-side archivist support required).</td>
+</tr>
+<tr>
+<td>couchbase</td>
+<td><a href="https://www.couchbase.com/">Couchbase</a> interface</td>
+</tr>
+<tr>
+<td>mysql</td>
+<td><a href="https://www.mysql.com/">MySQL</a> interface.</td>
+</tr>
+<tr>
+<td>redis</td>
+<td><a href="https://redis.io/">Redis</a> interface.</td>
+</tr>
+</tbody></table>
+
+<p>Vaults can have different configuration for different environments, as long as the Archivist
+API set used in your project is provided by the different vault backends you wish to use.</p>
+
+<h3 id="file-vault-backend">File vault backend</h3>
+
+<p>The file vault can be used to store data directly in your project. A ommon
+case for the use of the file vault backend is static data storage.</p>
+<pre class="highlight yaml tab-yaml"><code><span class="na">type</span><span class="pi">:</span> <span class="s">file</span>
+<span class="na">config</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">./filevault</span>
+    <span class="na">disableExpiration</span><span class="pi">:</span> <span class="s">true</span>  <span class="c1"># optional (default: false)</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>operation</th>
+<th style="text-align: center">supported</th>
+<th>implementation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">fs.readdir(config.path);</code></td>
+</tr>
+<tr>
+<td>get</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">fs.readFile(&#39;myfile.filevault&#39; and &#39;myfile.json&#39;);</code></td>
+</tr>
+<tr>
+<td>add</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">fs.writeFile(&#39;myfile.filevault&#39; and &#39;myfile.json&#39;);</code></td>
+</tr>
+<tr>
+<td>set</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">fs.writeFile(&#39;myfile.filevault&#39; and &#39;myfile.json&#39;);</code></td>
+</tr>
+<tr>
+<td>touch</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">fs.readFile(&#39;myfile.filevault&#39;); fs.writeFile(&#39;myfile.filevault&#39;);</code></td>
+</tr>
+<tr>
+<td>del</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">fs.readFile(&#39;myfile.filevault&#39;); fs.unlink(&#39;myfile.filevault&#39; and &#39;myfile.json&#39;);</code></td>
+</tr>
+</tbody></table>
+
+<p><code class="prettyprint">archivist:create</code> support is done via <code class="prettyprint">mkdirp</code> and just requires that the user
+running the command has enough rights to create folders in the project&rsquo;s path.</p>
+
+<h3 id="memory">Memory</h3>
+<pre class="highlight yaml tab-yaml"><code><span class="na">type</span><span class="pi">:</span> <span class="s">memory</span>
+</code></pre>
+<p>The memory vault backend can be used to keep data in-memory
+for the duration of the execution of your MAGE instance. Data
+will not be persisted to disk.</p>
+
+<table><thead>
+<tr>
+<th>operation</th>
+<th style="text-align: center">supported</th>
+<th>implementation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">for (var trueName in cache) { }</code></td>
+</tr>
+<tr>
+<td>get</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">deserialize(cache[trueName(fullIndex, topic)])</code></td>
+</tr>
+<tr>
+<td>add</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">cache[trueName(fullIndex, topic)] = serialize(data)</code></td>
+</tr>
+<tr>
+<td>set</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">cache[trueName(fullIndex, topic)] = serialize(data)</code></td>
+</tr>
+<tr>
+<td>touch</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">setTimeout()</code></td>
+</tr>
+<tr>
+<td>del</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">delete cache[trueName(fullIndex, topic)]</code></td>
+</tr>
+</tbody></table>
+
+<h3 id="client">Client</h3>
+
+<p>This vault is used to send updates to the player, so that their data is
+always synchronized in real time.</p>
+
+<p>This vault is always created when an archivist is instantiated by a
+<code class="prettyprint">State</code> object, using a name identical to the type: <code class="prettyprint">client</code>.</p>
+
+<p>This vault type requires no configuration.</p>
+
+<table><thead>
+<tr>
+<th>operation</th>
+<th style="text-align: center">supported</th>
+<th>implementation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list</td>
+<td style="text-align: center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get</td>
+<td style="text-align: center"></td>
+<td></td>
+</tr>
+<tr>
+<td>add</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">state.emitToActors(&#39;archivist:set&#39;)</code></td>
+</tr>
+<tr>
+<td>set</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">state.emitToActors(&#39;archivist:set&#39; or &#39;archivist:applyDiff&#39;)</code></td>
+</tr>
+<tr>
+<td>touch</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">state.emitToActors(&#39;archivist:touch&#39;)</code></td>
+</tr>
+<tr>
+<td>del</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">state.emitToActors(&#39;archivist:del&#39;)</code></td>
+</tr>
+</tbody></table>
+
+<h3 id="couchbase">Couchbase</h3>
+
+<aside class="warning">
+Please note that the authentication is different for Couchbase Server >= 5.0 and Couchbase Server < 5.0.
+The configuration for each is explained in the example on the right side.
+</aside>
+
+<aside class="info">
+We recommend you to use Couchbase Server >= 5.0 which is more secured that Couchbase Server < 5.0.
+</aside>
+<pre class="highlight yaml tab-yaml"><code><span class="na">type</span><span class="pi">:</span> <span class="s">couchbase</span>
+<span class="na">config</span><span class="pi">:</span>
+    <span class="na">options</span><span class="pi">:</span>
+        <span class="c1"># List of hosts in the cluster</span>
+        <span class="na">hosts</span><span class="pi">:</span> <span class="pi">[</span> <span class="s2">"</span><span class="s">localhost:8091"</span> <span class="pi">]</span>
+
+        <span class="c1"># Only for Couchbase Server &gt;= 5.0</span>
+        <span class="c1"># User credentials</span>
+        <span class="na">username</span><span class="pi">:</span> <span class="s">Administrator</span>
+        <span class="na">password</span><span class="pi">:</span> <span class="s2">"</span><span class="s">password"</span>
+
+        <span class="c1"># Only for Couchbase Server &lt; 5.0</span>
+        <span class="c1"># Bucket password (optional)</span>
+        <span class="na">password</span><span class="pi">:</span> <span class="s2">"</span><span class="s">toto"</span>
+
+        <span class="c1"># optional</span>
+        <span class="na">bucket</span><span class="pi">:</span> <span class="s">default</span>
+
+        <span class="c1"># optional, useful if you share a bucket with other applications</span>
+        <span class="na">prefix</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bob/"</span>
+
+        <span class="c1"># optional, can use any option specified in https://developer.couchbase.com/documentation/server/5.1/sdk/nodejs/client-settings.html#topic_pkk_vhn_qv__d397e189</span>
+        <span class="na">options</span><span class="pi">:</span>
+          <span class="c1"># usefull to debug network errors (eg. authentication errors)</span>
+          <span class="na">detailed_errcodes</span><span class="pi">:</span> <span class="s">1</span>
+
+    <span class="c1"># options only used with archivist:create</span>
+    <span class="na">create</span><span class="pi">:</span>
+        <span class="na">adminUsername</span><span class="pi">:</span> <span class="s">admin</span>
+        <span class="na">adminPassword</span><span class="pi">:</span> <span class="s2">"</span><span class="s">password"</span>
+        <span class="na">bucketType</span><span class="pi">:</span> <span class="s">couchbase</span> <span class="c1"># can be couchbase or memcached</span>
+        <span class="na">ramQuotaMB</span><span class="pi">:</span> <span class="s">100</span>       <span class="c1"># how much memory to allocate to the bucket</span>
+</code></pre>
+<p>For <strong>Couchbase Server &gt;= 5.0</strong>, <code class="prettyprint">options.user</code> and <code class="prettyprint">options.password</code> have to be set to a user who has access to the <code class="prettyprint">options.bucket</code>.</p>
+
+<p>For <strong>Couchbase Server &lt; 5.0</strong>, however, you just need to configure <code class="prettyprint">options.password</code> which correspond to the bucket password and is <strong>optional</strong>.</p>
+
+<p><code class="prettyprint">create.adminUsername</code> and <code class="prettyprint">create.password</code> need to be configured only if you wish to create the underlying bucket
+through <code class="prettyprint">archivist:create</code>, or to create views and query indexes
+through <code class="prettyprint">archivist:migrate</code>.</p>
+
+<table><thead>
+<tr>
+<th>operation</th>
+<th style="text-align: center">supported</th>
+<th>implementation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list</td>
+<td style="text-align: center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">couchbase.get()</code></td>
+</tr>
+<tr>
+<td>add</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">couchbase.add()</code></td>
+</tr>
+<tr>
+<td>set</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">couchbase.set()</code></td>
+</tr>
+<tr>
+<td>touch</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">couchbase.touch()</code></td>
+</tr>
+<tr>
+<td>del</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">couchbase.remove()</code></td>
+</tr>
+</tbody></table>
+
+<p><code class="prettyprint">archivist:create</code> support requires a separate <code class="prettyprint">create</code> entry in the <code class="prettyprint">config</code>,
+meanwhile views should be created/managed in migration scripts.</p>
+
+<p><br><br><br><br><br></p>
+
+<h3 id="mysql">MySQL</h3>
+<pre class="highlight yaml tab-yaml"><code><span class="na">type</span><span class="pi">:</span> <span class="s">mysql</span>
+<span class="na">config</span><span class="pi">:</span>
+    <span class="na">options</span><span class="pi">:</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s2">"</span><span class="s">myhost"</span>
+        <span class="na">user</span><span class="pi">:</span> <span class="s2">"</span><span class="s">myuser"</span>
+        <span class="na">password</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mypassword"</span>
+        <span class="na">database</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mydb"</span>
+</code></pre>
+<p>The available connection options are documented in the <a href="https://github.com/felixge/node-mysql#connection-options">node-mysql readme</a>.
+For pool options please look at <a href="https://github.com/felixge/node-mysql#pool-options">Pool options</a>.</p>
+
+<table><thead>
+<tr>
+<th>operation</th>
+<th style="text-align: center">supported</th>
+<th>implementation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">SELECT FROM table WHERE partialIndex</code></td>
+</tr>
+<tr>
+<td>get</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">SELECT FROM table WHERE fullIndex</code></td>
+</tr>
+<tr>
+<td>add</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">INSERT INTO table SET ?</code></td>
+</tr>
+<tr>
+<td>set</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">INSERT INTO table SET ? ON DUPLICATE KEY UPDATE ?</code></td>
+</tr>
+<tr>
+<td>touch</td>
+<td style="text-align: center"></td>
+<td></td>
+</tr>
+<tr>
+<td>del</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">DELETE FROM table WHERE fullIndex</code></td>
+</tr>
+</tbody></table>
+
+<p><code class="prettyprint">archivist:create</code> support requires that the user is allowed to create databases.</p>
+
+<blockquote>
+<p>Sample query to create a basic &ldquo;people&rdquo; topic table store.</p>
+</blockquote>
+<pre class="highlight sql tab-sql"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">people</span> <span class="p">(</span>
+  <span class="n">personId</span> <span class="n">INT</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">value</span> <span class="n">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">mediaType</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">personId</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre>
+<p>Queries against your database are done through a combination of the generated keys and serialized
+values. A generated key must yield a table name and a primary key. A serialized value must yield a
+number of column names with their respective values.</p>
+
+<p>For instance, given a topic <code class="prettyprint">people</code> and index <code class="prettyprint">{ personId: 1 }</code>, the destination table will need
+to have a <code class="prettyprint">personId</code> field, but also a <code class="prettyprint">value</code> field to store data ad a <code class="prettyprint">mediaType</code> field so that
+MAGE may know how to process the stored value.</p>
+
+<blockquote>
+<p>Overriding the serializer</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">people</span><span class="p">.</span><span class="nx">vaults</span><span class="p">.</span><span class="nx">mysql</span><span class="p">.</span><span class="nx">serialize</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">value</span><span class="p">:</span> <span class="nx">value</span><span class="p">.</span><span class="nx">setEncoding</span><span class="p">([</span><span class="s1">'utf8'</span><span class="p">,</span> <span class="s1">'buffer'</span><span class="p">]).</span><span class="nx">data</span><span class="p">,</span>
+        <span class="na">mediaType</span><span class="p">:</span> <span class="nx">value</span><span class="p">.</span><span class="nx">mediaType</span><span class="p">,</span>
+        <span class="na">lastChanged</span><span class="p">:</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="p">};</span>
+<span class="p">};</span>
+</code></pre>
+<p>If you want to change how this information is stored, by adding columns, etc, you can overload the
+serializer method to do so. For example, consider the following example if you want to add a
+timestamp to a <code class="prettyprint">lastChanged INT UNSIGNED NOT NULL</code> column.</p>
+
+<h3 id="redis">Redis</h3>
+<pre class="highlight yaml tab-yaml"><code><span class="na">type</span><span class="pi">:</span> <span class="s">redis</span>
+<span class="na">config</span><span class="pi">:</span>
+    <span class="na">port</span><span class="pi">:</span> <span class="s">6379</span>
+    <span class="na">host</span><span class="pi">:</span> <span class="s2">"</span><span class="s">127.0.0.1"</span>
+    <span class="na">options</span><span class="pi">:</span> <span class="pi">{}</span>
+    <span class="na">prefix</span><span class="pi">:</span> <span class="s2">"</span><span class="s">key/prefix/"</span>
+</code></pre>
+<p>The <code class="prettyprint">options</code> object is described in the <a href="https://npmjs.org/package/redis">node-redis readme</a>.
+Both <code class="prettyprint">options</code> and <code class="prettyprint">prefix</code> are optional. The option <code class="prettyprint">return_buffers</code> is turned on by default by the
+Archivist, because the default serialization will prepend values with meta data (in order to
+preserve mediaType awareness).</p>
+
+<table><thead>
+<tr>
+<th>operation</th>
+<th style="text-align: center">supported</th>
+<th>implementation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list</td>
+<td style="text-align: center"></td>
+<td></td>
+</tr>
+<tr>
+<td>get</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">redis.get()</code></td>
+</tr>
+<tr>
+<td>add</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">redis.set(&#39;NX&#39;)</code></td>
+</tr>
+<tr>
+<td>set</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">redis.set()</code></td>
+</tr>
+<tr>
+<td>touch</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">redis.expire()</code></td>
+</tr>
+<tr>
+<td>del</td>
+<td style="text-align: center">✔</td>
+<td><code class="prettyprint">redis.del()</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="topics">Topics</h2>
+
+<blockquote>
+<p>lib/archivist/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">player</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">index</span><span class="p">:</span> <span class="p">[</span><span class="s1">'userId'</span><span class="p">],</span>
+  <span class="na">vaults</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">userVault</span><span class="p">:</span> <span class="p">{}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+<p>Topics are essentially Archivist datatypes; they define which vault(s)
+to use for storage, the key structure for accessing data, and so on.</p>
+
+<p>In this example, we simply specify a new topic, called player, in which we will be
+identifying by userId.</p>
+
+<h3 id="add-an-expiration-time">Add an expiration time</h3>
+
+<p>In your topic config, you can specify a <code class="prettyprint">ttl</code> to make your data expires after a certain amount of time.</p>
+
+<p><code class="prettyprint">ttl</code> should be a string matching one of the following formats:</p>
+
+<ul>
+<li>days: &ldquo;[num]d&rdquo;</li>
+<li>hours: &ldquo;[num]h&rdquo;</li>
+<li>minutes: &ldquo;[num]m&rdquo;</li>
+<li>seconds: &ldquo;[num]s&rdquo;</li>
+</ul>
+
+<blockquote>
+<p>Add an expiration time</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">player</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+  <span class="na">ttl</span><span class="p">:</span> <span class="s1">'1m'</span> <span class="c1">// Expire the data after 1 minute</span>
+<span class="p">};</span>
+</code></pre>
+<h2 id="store-retrieve-topics">Store &amp; retrieve topics</h2>
+
+<blockquote>
+<p>lib/modules/players/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">create</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">userId</span><span class="p">,</span> <span class="nx">playerData</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">state</span><span class="p">.</span><span class="nx">archivist</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'player'</span><span class="p">,</span> <span class="p">{</span> <span class="na">userId</span><span class="p">:</span> <span class="nx">userId</span> <span class="p">},</span> <span class="nx">playerData</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">list</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">topic</span> <span class="o">=</span> <span class="s1">'player'</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">partialIndex</span> <span class="o">=</span> <span class="p">{};</span>
+
+  <span class="nx">state</span><span class="p">.</span><span class="nx">archivist</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span><span class="nx">topic</span><span class="p">,</span> <span class="nx">partialIndex</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">indexes</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">queries</span> <span class="o">=</span> <span class="nx">indexes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="p">{</span> <span class="na">topic</span><span class="p">:</span> <span class="nx">topic</span><span class="p">,</span> <span class="na">index</span><span class="p">:</span> <span class="nx">index</span> <span class="p">};</span>
+    <span class="p">});</span>
+
+    <span class="nx">state</span><span class="p">.</span><span class="nx">archivist</span><span class="p">.</span><span class="nx">mget</span><span class="p">(</span><span class="nx">queries</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre>
+<blockquote>
+<p>lib/modules/players/usercommands/register.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">mage</span><span class="p">.</span><span class="nx">players</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">userId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">mage</span><span class="p">.</span><span class="nx">players</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">userId</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">coins</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+      <span class="na">level</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="na">tutorialCompleted</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">});</span>
+
+    <span class="nx">state</span><span class="p">.</span><span class="nx">respond</span><span class="p">(</span><span class="nx">userId</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nx">callback</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre>
+<blockquote>
+<p>lib/modules/players/usercommands/list.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">)</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">mage</span><span class="p">.</span><span class="nx">players</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">players</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// We ignore the error for brievety's sake</span>
+    <span class="nx">state</span><span class="p">.</span><span class="nx">respond</span><span class="p">(</span><span class="nx">players</span><span class="p">);</span>
+    <span class="nx">callback</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre>
+<p>Again, in this example we are leaving the ACL permissions entirely open so that you may
+try to manually access them; in the real world, however, you would need to make sure to
+put the right permissions in here.</p>
+
+<p>In this example, we augment the players module we have previously created with two
+methods: <code class="prettyprint">create</code>, and <code class="prettyprint">list</code>. In each method, we use <code class="prettyprint">state.archivist</code> to retrieve
+and store data. We then modify the <code class="prettyprint">players.register</code> user command, and have it create
+the player&rsquo;s data upon successful registration. Finally, we add a new user command
+called <code class="prettyprint">players.list</code>, which will let us see a list of all players&rsquo; data.</p>
+
+<p>You may notice that <code class="prettyprint">players.list</code> actually calls two functions: <code class="prettyprint">state.archivist.list</code> and
+<code class="prettyprint">state.archivist.mget</code>; this is because <code class="prettyprint">list</code> will return a list of indexes, which we
+then feed into <code class="prettyprint">mget</code> (remember, Archivist works with key-value).</p>
+
+<p>You may also notice that while <code class="prettyprint">state.archivist.list</code> is asynchronous (it requires a callback
+function), <code class="prettyprint">state.archivist.set</code> is not; because states act as transactions, writes
+are not executed against your backend storage until the transaction is completed, thus
+making write operations synchronous. This will generally be true of all <code class="prettyprint">state.archivist</code>
+APIs; reads will be asynchronous, but writes will be synchronous.</p>
+
+<h2 id="testing-storage">Testing storage</h2>
+<pre class="highlight shell tab-shell"><code>curl -X POST http://127.0.0.1:8080/game/players.list <span class="se">\</span>
+--data-binary @- <span class="sh">&lt;&lt; EOF
+[]
+{}
+EOF
+</span></code></pre><pre class="highlight powershell tab-powershell"><code> Invoke-RestMethod -Method Post -Uri <span class="s2">"http://127.0.0.1:8080/game/players.list"</span> -Body <span class="s1">'[]
+{}'</span> | ConvertTo-Json
+</code></pre>
+<p>We can re-use the previous command to create a new user; once we have done so, we can use
+the following command to retrieve the data we have just created.</p>
+
+<h2 id="key-based-filtering">Key-based filtering</h2>
+
+<blockquote>
+<p>lib/archivist/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">item</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">index</span><span class="p">:</span> <span class="p">[</span><span class="s1">'userId'</span><span class="p">,</span> <span class="s1">'itemId'</span><span class="p">],</span>
+  <span class="na">vaults</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">itemVault</span><span class="p">:</span> <span class="p">{}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+<blockquote>
+<p>lib/modules/items/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">getItemsForUser</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">userId</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">topic</span> <span class="o">=</span> <span class="s1">'item'</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">partialIndex</span> <span class="o">=</span> <span class="p">{</span> <span class="na">userId</span><span class="p">:</span> <span class="nx">userId</span> <span class="p">};</span>
+
+  <span class="nx">state</span><span class="p">.</span><span class="nx">archivist</span><span class="p">.</span><span class="nx">scan</span><span class="p">(</span><span class="nx">topic</span><span class="p">,</span> <span class="nx">partialIndex</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre>
+<p>With certain APIs you can provide only a portion of an index and search for
+all indexes who have the same value for that option. These indexes are referred
+to as <em>partial indexes</em>.</p>
+
+<p>There are a few ways by which you can split and filter the data
+stored in your topics:</p>
+
+<ol>
+<li>You can use <a href="https://mage.github.io/mage/api/classes/archivist.html#list">archivist.list</a> to list
+ all the indexes matching a given partial index</li>
+<li>You can use <a href="https://mage.github.io/mage/api/classes/archivist.html#mget">archivist.mget</a> to fetch
+ multiple indexes at once</li>
+<li>You can use <a href="https://mage.github.io/mage/api/classes/archivist.html#scan">archivist.scan</a>, which combines
+ both operations mentioned above into one</li>
+</ol>
+
+<p>You will generally want to use <code class="prettyprint">scan</code> for most of your operations, but in some cases, you will find
+that manually fetching the list of indexes using <code class="prettyprint">list</code> and applying your own custom filtering before
+calling <code class="prettyprint">mget</code> will give you a better result.</p>
+
+<h2 id="limiting-access">Limiting access</h2>
+
+<blockquote>
+<p>lib/archivist/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">item</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">index</span><span class="p">:</span> <span class="p">[</span><span class="s1">'userId'</span><span class="p">,</span> <span class="s1">'itemId'</span><span class="p">],</span>
+  <span class="na">vaults</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">client</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">shard</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">index</span><span class="p">.</span><span class="nx">userId</span><span class="p">;</span>
+      <span class="p">},</span>
+      <span class="na">acl</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">test</span><span class="p">([</span><span class="s1">'user'</span><span class="p">,</span> <span class="s1">'test'</span><span class="p">],</span> <span class="s1">'get'</span><span class="p">,</span> <span class="p">{</span> <span class="na">shard</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+        <span class="nx">test</span><span class="p">([</span><span class="s1">'cms'</span><span class="p">,</span> <span class="s1">'admin'</span><span class="p">],</span> <span class="s1">'*'</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">inventoryVault</span><span class="p">:</span> <span class="p">{}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+<p>In most cases, you will want to make sure that a given user will
+only be able to access data they have the permission to access.</p>
+
+<p>There are primarily two ways to limit access to topics:</p>
+
+<ul>
+<li><strong>shard function</strong>: used to filter what data can be viewed;</li>
+<li><strong>acl function</strong>: used to determine if the data can be accessed;</li>
+</ul>
+
+<p>In this example, we use the shard function to limit returned data
+to only data which matches the userId.</p>
+
+<p>We then use the acl function to only allow users and tests access to
+the <code class="prettyprint">get</code> API, but full access to CMS users and administrators.</p>
+
+<h2 id="database-creation">Database Creation</h2>
+
+<p>Some vaults also support database/vault creation via the <code class="prettyprint">archivist:create</code> command as long
+as admin credentials are properly configured, see each vault&rsquo;s configuration on how to use it.</p>
+
+<p>List of <code class="prettyprint">archivist:create</code> enabled backends:</p>
+
+<ul>
+<li><code class="prettyprint">file</code></li>
+<li><code class="prettyprint">couchbase</code></li>
+<li><code class="prettyprint">mysql</code></li>
+</ul>
+
+<p>It is not recommended to use those features in production.</p>
+
+<h2 id="migrations">Migrations</h2>
+
+<p>MAGE supports database migration scripts similar to <a href="http://api.rubyonrails.org/classes/ActiveRecord/Migration.html">Ruby on Rails 2.1</a>
+which are aligned with your <code class="prettyprint">package.json</code> version and exposed via the <code class="prettyprint">archivist:migrate</code>
+command.</p>
+
+<p>Running the <code class="prettyprint">archivist:migrate</code> command will go through each migrations in order up to the current
+<code class="prettyprint">package.json</code> version and apply them. The command also allows specifying an exact version allowing
+for testing new migrations or reverting to a previous version.</p>
+
+<h3 id="how-to-write-migration-scripts">How to write migration scripts</h3>
+
+<p>Migration scripts are single files per vault and per version. These files are JavaScript modules and
+should export two methods: <code class="prettyprint">up</code> and <code class="prettyprint">down</code>, to allow migration in two directions. You are strongly
+encouraged to implement a <code class="prettyprint">down</code> migration path, but if it&rsquo;s really impossible, you may leave out
+the <code class="prettyprint">down</code> method. Keep in mind that <strong>this will block rollback operations</strong>. See the sample on the
+right side for more details.</p>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">up</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">vault</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">sql</span> <span class="o">=</span>
+                <span class="s1">'CREATE TABLE inventory (\n'</span> <span class="o">+</span>
+                <span class="s1">'  actorId VARCHAR(255) NOT NULL PRIMARY KEY,\n'</span> <span class="o">+</span>
+                <span class="s1">'  value TEXT NOT NULL,\n'</span> <span class="o">+</span>
+                <span class="s1">'  mediaType VARCHAR(255) NOT NULL\n'</span> <span class="o">+</span>
+                <span class="s1">') ENGINE=InnoDB'</span><span class="p">;</span>
+
+        <span class="nx">vault</span><span class="p">.</span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="nx">sql</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">return</span> <span class="nx">cb</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+                <span class="p">}</span>
+
+                <span class="k">return</span> <span class="nx">cb</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">{</span> <span class="na">summary</span><span class="p">:</span> <span class="s1">'Created the inventory table'</span> <span class="p">});</span>
+        <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">down</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">vault</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">vault</span><span class="p">.</span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">'DROP TABLE inventory'</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre>
+<p>The migration file goes to your game&rsquo;s <code class="prettyprint">lib/archivist/migrations</code> folder into a subfolder per vault.
+This folder should have the exact same name as your vault does. The migration file you provide
+should be named after the version in <code class="prettyprint">package.json</code> and have the extension <code class="prettyprint">.{js,ts}</code>. Other file
+extensions are ignored.</p>
+
+<p>Some typical examples:</p>
+
+<ul>
+<li><code class="prettyprint">lib/archivist/migrations/&lt;vaultname&gt;/v0.1.0.js</code></li>
+<li><code class="prettyprint">lib/archivist/migrations/&lt;vaultname&gt;/v0.1.1.js</code></li>
+<li><code class="prettyprint">lib/archivist/migrations/&lt;vaultname&gt;/v0.2.0.js</code></li>
+</ul>
+
+<p>The callback of the <code class="prettyprint">up</code> method allows you to pass a report, that will be stored with the migration
+itself inside the version history. In MySQL for example, this is all stored in a <code class="prettyprint">schema_migrations</code>
+table, which is automatically created.</p>
+
+<h3 id="how-to-execute-migrations">How to execute migrations</h3>
+
+<p>Migrations can be executed by calling some specific CLI commands, which are detailed when you run
+<code class="prettyprint">npm run help</code> or <code class="prettyprint">mage --help</code>. They allow you to create a database, drop a database, and run migrations.
+This is what they look like:</p>
+<pre class="highlight plaintext tab-plaintext"><code>archivist:create [vaults]     create database environments for all configured vaults
+archivist:drop [vaults]       destroy database environments for all configured vaults
+archivist:migrate [version]   migrates all vaults to the current version, or to the version requested
+</code></pre>
+<h2 id="maximum-data-size-warning-and-errors">Maximum data size (warning and errors)</h2>
+<pre class="highlight yaml tab-yaml"><code><span class="na">archivist</span><span class="pi">:</span>
+  <span class="na">size</span><span class="pi">:</span>
+    <span class="c1"># Default set to 1Mb (1024 kilobytes); set to false to disable</span>
+    <span class="na">warning</span><span class="pi">:</span> <span class="s">256</span>
+
+    <span class="c1"># Disabled by default</span>
+    <span class="na">error</span><span class="pi">:</span> <span class="s">512</span>
+</code></pre>
+<p>MAGE will keep track of all data that is written into vaults, and automatically log a warning
+when the data size reaches a certain threshold. Optionally, you can also configure MAGE to throw
+an error should the data reach a certain size.</p>
+
+<p>You may configure this behavior by configuring <code class="prettyprint">archivist.size.warning</code> and <code class="prettyprint">archivist.size.error</code>
+in your configuration files. By default, MAGE will never throw an error no matter how big your
+data gets, but will log a warning should your data be bigger than 1 megabyte.</p>
+
+          <h1 id="events">Events</h1>
+
+<p>We have seen in the <a href="#states">States</a> section of this user guide that states can be used to emit events between players.
+Before explaining how to send events, we will first see how MAGE send events to the clients, and how to configure the server to do so.</p>
+
+<h2 id="how-does-it-work">How does it work ?</h2>
+
+<p>Events sending and receipt is done via <strong>Message Stream</strong>.</p>
+
+<p>Message Stream is a protocol used by MAGE servers and its clients in order to communicate. This protocol is implemented through different transports, which are the following:</p>
+
+<ul>
+<li><strong>short-polling</strong>: The client send a request to the server and get an <strong>instant response</strong> with the events. The client repeats this every X seconds to receive new events.</li>
+<li><strong>long-polling</strong>: The client send a request to the server and keep the connection open. The server will send a response with the events once one or multiple events destinated to the client are received. Then, the client open a new connection and repeat the process.</li>
+<li><strong>websocket</strong>: Real time events sending and receipt.</li>
+</ul>
+
+<p>If you need more information about Message Stream protocol, you can read this <a href="https://github.com/mage/mage/tree/master/lib/msgServer/msgStream">documentation</a>.</p>
+
+<p>In your MAGE config file, you can specify the priority of the transports which will be used by the client SDK to receive the events.</p>
+
+<blockquote>
+<p>config/default.yaml</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">msgStream</span><span class="pi">:</span>
+        <span class="na">detect</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s">websocket</span>
+            <span class="pi">-</span> <span class="s">longpolling</span>
+            <span class="pi">-</span> <span class="s">shortpolling</span>
+
+</code></pre>
+<p>You can also configure longpolling transport:</p>
+
+<blockquote>
+<p>config/default.yaml</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">msgStream</span><span class="pi">:</span>
+        <span class="na">transports</span><span class="pi">:</span>
+            <span class="na">longpolling</span><span class="pi">:</span>
+                <span class="na">heartbeat</span><span class="pi">:</span> <span class="s">60</span>
+
+</code></pre>
+<p>For the <code class="prettyprint">longpolling</code> transport, you can specify a <code class="prettyprint">heartbeat</code> config, which correspond to the number of seconds until a request expire and automatically close.</p>
+
+<p>Now we have seen how to configure your server to send and receive events, we will now see how to send events with the <a href="#states">State</a> object.</p>
+
+<h2 id="sending-events">Sending events</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/annoy.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">actorId</span><span class="p">,</span> <span class="nx">payload</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">state</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="nx">actorId</span><span class="p">,</span> <span class="s1">'annoy'</span><span class="p">,</span> <span class="nx">payload</span><span class="p">);</span>
+  <span class="nx">callback</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre>
+<p>When a user command is executed, you can stack many events to be emitted
+once the user command succeeds. Those events will then be
+sent synchronously to the destination.</p>
+
+<h2 id="sending-asynchronous-events">Sending asynchronous events</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/bombard.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">State</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">).</span><span class="nx">core</span><span class="p">.</span><span class="nx">State</span><span class="p">;</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">actorId</span><span class="p">,</span> <span class="nx">payload</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">asynchronousState</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">State</span><span class="p">();</span>
+  <span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+  <span class="kd">function</span> <span class="nx">schedule</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">asynchronousState</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="nx">actorId</span><span class="p">,</span> <span class="s1">'annoy'</span><span class="p">,</span> <span class="nx">payload</span><span class="p">);</span>
+        <span class="nx">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">===</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">asynchronousState</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
+        <span class="p">}</span>
+
+        <span class="nx">schedule</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">schedule</span><span class="p">();</span>
+  <span class="nx">callback</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre>
+<p>In some cases, you might want to emit events not attached to a user command. For instance,
+you may want to send an event after a certain amount of time, or once something has changed
+in the database. To do so, you will need to create your own State of that. You will also need
+to make sure to manually close that state.</p>
+
+<p>For more information, please read the <a href="./api/interfaces/mage.core.istate.html">State API documentation</a>.</p>
+
+<h2 id="broadcasting-events">Broadcasting events</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/annoyEveryone.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">];</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">payload</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">state</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="s1">'annoy'</span><span class="p">,</span> <span class="nx">payload</span><span class="p">);</span>
+    <span class="nx">callback</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre>
+<aside class="notice">
+`state.emit()` can also take an array of actorIds. You should use this
+instead of broadcast if you need to send an event to a filtered
+group of actors.
+</aside>
+
+<p>In some rare case, you might want to emit events to all users. For instance,
+you might want to warn connected users of an upcoming maintenance, or
+of other events which might affect them.</p>
+
+<p>In such cases, you will want to use <code class="prettyprint">state.broadcast</code> to send the event to
+everyone. Keep in mind that broadcasting to all may affect your overall load
+if you have many players connected simultaneously.</p>
+
+          <h1 id="time-manipulation">Time manipulation</h1>
+
+<aside class="warning">
+When running MAGE in a cluster, make sure all the server&rsquo;s clocks
+are synchronised! MAGE is not responsible for maintaining clock
+synchronicity between servers
+</aside>
+
+<blockquote>
+<p>lib/modules/myModule/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="p">{</span>
+  <span class="nx">time</span><span class="p">,</span>
+  <span class="nx">logger</span>
+<span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">)</span>
+
+<span class="c1">// Accelerate time by a factor of 5</span>
+<span class="nx">time</span><span class="p">.</span><span class="nx">bend</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">method</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">sec</span><span class="p">();</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">now</span> <span class="o">&gt;</span> <span class="nx">lastLogin</span> <span class="o">+</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// do daily login bonus</span>
+  <span class="p">}</span>
+
+  <span class="nx">state</span><span class="p">.</span><span class="nx">archivist</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'someTopic'</span><span class="p">,</span> <span class="p">{</span> <span class="na">userId</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">actorId</span> <span class="p">},</span> <span class="p">{</span>
+    <span class="na">time</span><span class="p">:</span> <span class="nx">now</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+<p>Some types of games are meant to be played over fixed period of time;
+some game features may also be time-sensitive. For instance, you might want
+to give daily bonuses on player log in.</p>
+
+<p>However, during testing, you probably do not want to wait for a whole day to
+see if your player will be awarded a bonus. To deal with this issue, you can
+use the MAGE built-in <code class="prettyprint">mage.time</code> module. This module allows developer
+to slow down or accelerate time from the MAGE process&rsquo; perspective.</p>
+
+<p>This feature is often refered to as <em>time bending</em></p>
+
+<p>Note that this does not affect existing APIs (such as <code class="prettyprint">setTimeout</code>,
+<code class="prettyprint">setInterval</code>, or the <code class="prettyprint">Date</code> class); instead, you will need to use the
+the time module to compute a time value from the server&rsquo;s perspective,
+then use that value as a setTimeout/setInterval/new Date call argument.</p>
+
+<p>For more information on how to use the time library, see the
+<a href="./api/classes/mage.html#time">time module API documentation</a>. You may also
+want to have a look at the following libraries whenever dealing with time
+and time bending:</p>
+
+<ul>
+<li><a href="https://momentjs.com/">Moment.js</a></li>
+<li><a href="https://www.npmjs.com/package/safe-timers">safe-timers</a></li>
+</ul>
+
+          <h1 id="logging">Logging</h1>
+
+<p>Logging is an important part of running production-ready game servers. MAGE
+ships with its own logging API, which developers can use and configure
+in different ways depending on the environment they are running the server
+on.</p>
+
+<h2 id="log-levels-channels">Log levels (channels)</h2>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">logger</span> <span class="o">=</span> <span class="nx">mage</span><span class="p">.</span><span class="nx">logger</span><span class="p">;</span>
+<span class="nx">logger</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">);</span>
+<span class="nx">logger</span><span class="p">.</span><span class="nx">info</span><span class="p">.</span><span class="nx">data</span><span class="p">({</span>
+  <span class="na">debug</span><span class="p">:</span> <span class="s1">'data'</span>
+<span class="p">}).</span><span class="nx">log</span><span class="p">(</span><span class="s1">'trying to do something'</span><span class="p">);</span>
+
+<span class="nx">logger</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'It broke'</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'this error stack will be parsed and formatted'</span><span class="p">));</span>
+</code></pre>
+<p>Log channels define the level of priority and importance of
+a log entry. Just like in most systems, the level of verbosity
+of a MAGE server can be configured; during development, you
+will probably want to show debug logs, while in production
+seeing warnings and errors will be sufficient.</p>
+
+<p>The following channels are provided in MAGE</p>
+
+<table><thead>
+<tr>
+<th>Channel</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>verbose</td>
+<td>Low-level debug information (I/O details, etc); reserved to MAGE internals</td>
+</tr>
+<tr>
+<td>debug</td>
+<td>Game server debugging information</td>
+</tr>
+<tr>
+<td>info</td>
+<td>User command request information</td>
+</tr>
+<tr>
+<td>notice</td>
+<td>Services state change notification (example: third-party services and databases)</td>
+</tr>
+<tr>
+<td>warning</td>
+<td>An unusual situation occurred, which requires analysis</td>
+</tr>
+<tr>
+<td>error</td>
+<td>A user request caused an error. The user should still be able to continue using the services</td>
+</tr>
+<tr>
+<td>critical</td>
+<td>A user is now stuck in a broken state which the system cannot naturally repair</td>
+</tr>
+<tr>
+<td>alert</td>
+<td>Internal services (data store API calls failed, etc) or external services are failing</td>
+</tr>
+<tr>
+<td>emergency</td>
+<td>The app cannot boot or stopped unexpectedly</td>
+</tr>
+</tbody></table>
+
+<h2 id="log-contexts">Log contexts</h2>
+
+<blockquote>
+<p>lib/modules/players/index.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">logger</span> <span class="o">=</span> <span class="nx">mage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">context</span><span class="p">(</span><span class="s1">'players'</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>lib/modules/players/usercommands/log.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">logger</span> <span class="o">=</span> <span class="nx">mage</span><span class="p">.</span><span class="nx">players</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">context</span><span class="p">(</span><span class="s1">'log'</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">]</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">logger</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s1">'This log is very contextualized'</span><span class="p">);</span>
+    <span class="nx">callback</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre>
+<blockquote>
+<p>Log output</p>
+</blockquote>
+<pre class="highlight plaintext tab-plaintext"><code>w-12345 - 23:59:59.999    &lt;debug&gt; [gameName players log] This log is very contextualized
+</code></pre>
+<p>In addition to the channel, you may want to set a logger context to help you
+sort out log output. Developers are free to use contexts as they see fit.</p>
+
+<p>In this example, we first attach the <code class="prettyprint">players</code> context to the logger that will
+be used at the module level, and then expose it; then, in a user command,
+we add an additional context specific to the user command, and use the resulting
+logger to simply log a message.</p>
+
+<p>In the terminal, you would then see the following log output. Notice that the
+context is now appended to the terminal output.</p>
+
+<h2 id="log-backends">Log backends</h2>
+
+<p>The following logging backends are provided:</p>
+
+<table><thead>
+<tr>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>terminal</td>
+<td>Log to the console</td>
+</tr>
+<tr>
+<td>file</td>
+<td>Log to local files</td>
+</tr>
+<tr>
+<td>syslog</td>
+<td>Log to syslog through UDP</td>
+</tr>
+<tr>
+<td>graylog</td>
+<td>Log to GELF</td>
+</tr>
+</tbody></table>
+
+<h3 id="terminal">Terminal</h3>
+
+<aside class="warning">
+By default, the logger will log to the terminal. To disable this behaviour, set terminal to false in your config.
+</aside>
+
+<blockquote>
+<p>Disable terminal logging</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">logging</span><span class="pi">:</span>
+    <span class="na">server</span><span class="pi">:</span>
+        <span class="na">terminal</span><span class="pi">:</span> <span class="s">false</span>
+</code></pre>
+<blockquote>
+<p>Terminal config example</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">logging</span><span class="pi">:</span>
+    <span class="na">server</span><span class="pi">:</span>
+        <span class="na">terminal</span><span class="pi">:</span>
+            <span class="na">channels</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">&gt;=info"</span><span class="pi">]</span>
+            <span class="na">config</span><span class="pi">:</span>
+                <span class="na">jsonIndent</span><span class="pi">:</span> <span class="s">2</span>
+                <span class="na">jsonOutput</span><span class="pi">:</span> <span class="s">false</span>
+                <span class="na">theme</span><span class="pi">:</span> <span class="s">default</span>
+</code></pre>
+<p>The terminal log backend can be configured for pretty-logging, which makes reading
+log entries in your console more visually comfortable.</p>
+
+<p>The following themes are available:</p>
+
+<ul>
+<li>default</li>
+<li>dark</li>
+<li>light</li>
+</ul>
+
+<p>The terminal log backend may also be configured for piping logs to an external
+process. For instance, you may be deploying your MAGE in PaaS or IaaS which
+simply forwards and parses stdout/stderr output.</p>
+
+<p>In such case, you can turn the <code class="prettyprint">jsonOutput</code> configuration entry to <code class="prettyprint">true</code>;
+each log line outputed will then be outputed as a JSON object.</p>
+
+<h3 id="file">File</h3>
+
+<blockquote>
+<p>File config example</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">logging</span><span class="pi">:</span>
+    <span class="na">server</span><span class="pi">:</span>
+        <span class="na">file</span><span class="pi">:</span>
+            <span class="na">channels</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">&gt;=debug"</span><span class="pi">]</span>
+            <span class="na">config</span><span class="pi">:</span>
+                <span class="na">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">./logs"</span>
+                <span class="na">jsonIndent</span><span class="pi">:</span> <span class="s">2</span>
+                <span class="na">mode</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0600"</span>    <span class="c1"># make sure this is a string!</span>
+                <span class="na">fileNames</span><span class="pi">:</span>
+                    <span class="s2">"</span><span class="s">app.log"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">all"</span>    <span class="c1"># this is configured by default and you may override it</span>
+                    <span class="s2">"</span><span class="s">error.log"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&gt;=warning"</span>
+</code></pre>
+<p>The file log backend allows you to output logs to a set of file of your choice. Simply
+specify a log directory where you want your log files to go, and a set of filenames to log to.
+You can control which log level will go in which file by setting the log level range
+as a value, or specify <code class="prettyprint">all</code> if you wish to write all logs to a single file.</p>
+
+<p><br><br><br><br><br><br><br><br></p>
+
+<h3 id="syslog">Syslog</h3>
+
+<blockquote>
+<p>Syslog config example</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">logging</span><span class="pi">:</span>
+    <span class="na">server</span><span class="pi">:</span>
+        <span class="na">syslog</span><span class="pi">:</span>
+            <span class="na">channels</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">&gt;=debug"</span><span class="pi">]</span>
+            <span class="na">config</span><span class="pi">:</span>
+                <span class="na">host</span><span class="pi">:</span> <span class="s">localhost</span>          <span class="c1"># host to connect to (IP or hostname)</span>
+                <span class="na">port</span><span class="pi">:</span> <span class="s">514</span>                <span class="c1"># UDP port to connect to</span>
+                <span class="na">appName</span><span class="pi">:</span> <span class="s">myGame</span>
+                <span class="na">facility</span><span class="pi">:</span> <span class="s">1</span>              <span class="c1"># see syslog documentation</span>
+                <span class="na">format</span><span class="pi">:</span>
+                    <span class="na">multiLine</span><span class="pi">:</span> <span class="s">true</span>      <span class="c1"># allow newline characters</span>
+                    <span class="na">indent</span><span class="pi">:</span> <span class="s">2</span>            <span class="c1"># indentation when serializing data in multiLine mode</span>
+</code></pre>
+<p>The syslog log backend allows you to forward your logs to a remote
+syslog server using the UDP protocol.</p>
+
+<p>MAGE does not currently support forwarding to syslog TCP servers; because
+of this, it also does not support using TLS.</p>
+
+<p>Since only UDP is supported, it also means that some logs may not arrive to
+destination.</p>
+
+<p><br><br><br><br><br><br><br><br></p>
+
+<h3 id="graylog">Graylog</h3>
+
+<blockquote>
+<p>Graylog config example</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">logging</span><span class="pi">:</span>
+    <span class="na">server</span><span class="pi">:</span>
+        <span class="na">graylog</span><span class="pi">:</span>
+            <span class="na">channels</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">&gt;=info"</span><span class="pi">]</span>
+            <span class="na">config</span><span class="pi">:</span>
+                <span class="na">servers</span><span class="pi">:</span>
+                    <span class="pi">-</span> <span class="pi">{</span> <span class="nv">host</span><span class="pi">:</span> <span class="s2">"</span><span class="s">192.168.100.85"</span><span class="pi">,</span> <span class="nv">port</span><span class="pi">:</span> <span class="nv">12201</span> <span class="pi">}</span>
+                <span class="na">facility</span><span class="pi">:</span> <span class="s">Application identifier</span>
+                <span class="na">format</span><span class="pi">:</span>
+                    <span class="na">multiLine</span><span class="pi">:</span> <span class="s">true</span>      <span class="c1"># allow newline characters</span>
+                    <span class="na">embedDetails</span><span class="pi">:</span> <span class="s">false</span>  <span class="c1"># embed log details into the message</span>
+                    <span class="na">embedData</span><span class="pi">:</span> <span class="s">false</span>     <span class="c1"># embed data into the message</span>
+</code></pre>
+<p>The syslog log backend allows you to forward your logs to a remote
+graylog2 server, or to any other services capable to consuming
+the <a href="http://docs.graylog.org/en/2.2/pages/gelf.html">GELF protocol</a>.</p>
+
+<p>Such services include:</p>
+
+<ul>
+<li><a href="https://www.elastic.co/guide/en/logstash/5.4/plugins-inputs-gelf.html">Logstash</a></li>
+<li><a href="https://github.com/MerlinDMC/fluent-plugin-input-gelf">Fluentd</a></li>
+</ul>
+
+<p>You may choose to embed details and data into the message, instead of having them
+as separate attributes. If so, respectively turn <code class="prettyprint">embedDetails</code> and <code class="prettyprint">embedData</code> to <code class="prettyprint">true</code>.</p>
+
+          <h1 id="http-server">HTTP Server</h1>
+
+<p>You might end up in a case where you would like to do one
+of the following:</p>
+
+<ol>
+<li>Serve files from your MAGE server (useful when developing HTML5 games)</li>
+<li>Serve service status files (or content)</li>
+<li>Proxy requests to a remote server through MAGE</li>
+</ol>
+
+<p>To this end, MAGE provides to developers an <a href="./api/interfaces/imagecore.html#httpserver">API</a> that will allow you
+to do such things.</p>
+
+<h2 id="cross-origin-resource-sharing-cors">Cross-Origin Resource Sharing (CORS)</h2>
+
+<p>If you want your application to span multiple domains, you need to enable CORS. For information on
+what CORS is, please consult the following websites.</p>
+
+<ul>
+<li><a href="http://www.html5rocks.com/en/tutorials/cors/">HTML5 Rocks tutorial</a></li>
+<li><a href="https://developer.mozilla.org/en/docs/HTTP/Access_control_CORS">Mozilla</a></li>
+<li><a href="http://www.w3.org/TR/cors/">w3c spec</a></li>
+</ul>
+
+<h3 id="performance">Performance</h3>
+
+<p>Keep in mind that using CORS will often cause so-called &ldquo;preflight&rdquo; requests. A preflight request
+is an HTTP <code class="prettyprint">OPTIONS</code> request to the server to confirm if a request is allowed to be made in a manner
+that is considered safe for the user. Only after this confirmation will a real <code class="prettyprint">GET</code> or <code class="prettyprint">POST</code>
+request be made. All this happens invisible to the end user and developer, but there is a
+performance penalty that you pay, caused by this extra round trip to the server.</p>
+
+<h3 id="using-authentication-and-cors">Using authentication and CORS</h3>
+
+<p>If you use <code class="prettyprint">Basic</code> or any other HTTP authentication mechanism, you cannot configure CORS to allow
+any origin using the <code class="prettyprint">*</code> wildcard symbol. In that case, you must specify exactly which origin is
+allowed to access your server.</p>
+
+<h3 id="configuration">Configuration</h3>
+
+<p>In your configuration, you can enable CORS like this:</p>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">clientHost</span><span class="pi">:</span>
+        <span class="na">cors</span><span class="pi">:</span>
+            <span class="na">methods</span><span class="pi">:</span> <span class="s2">"</span><span class="s">GET,</span><span class="nv"> </span><span class="s">POST,</span><span class="nv"> </span><span class="s">OPTIONS"</span>
+            <span class="na">origin</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://mage-app.wizcorp.jp"</span>
+            <span class="na">credentials</span><span class="pi">:</span> <span class="s">true</span>
+</code></pre>
+<ul>
+<li><code class="prettyprint">methods</code> (optional) lists which HTTP request methods are acceptable.</li>
+<li><code class="prettyprint">origin</code> (optional) sets the required origin, may be (and defaults to) <code class="prettyprint">&quot;*&quot;</code></li>
+<li><code class="prettyprint">credentials</code> (optional) must be set to <code class="prettyprint">true</code> if you want cookies and HTTP
+authentication to be usable at all. You can then no longer use the wildcard origin.</li>
+</ul>
+
+<h2 id="log-configuration">Log Configuration</h2>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">quietRoutes</span><span class="pi">:</span> <span class="c1"># Filter out debug and verbose logs for URLs matching these regex</span>
+        <span class="pi">-</span> <span class="s">^\/check\.txt</span>
+        <span class="pi">-</span> <span class="s">^\/favicon\.ico</span>
+    <span class="na">longRoutes</span><span class="pi">:</span> <span class="c1"># Filter out long warnings for U##### What does it change for other browsers?</span>
+
+<span class="s">Absolutely nothing. And you can still apply the retry logic on network errors, it's not a bad idea.RLs matching these regex</span>
+        <span class="s">- ^\/msgstream</span>
+    <span class="s">longThreshold</span><span class="pi">:</span> <span class="s">500</span> <span class="c1"># The number of milliseconds before a request is considered to be taking too long</span>
+</code></pre>
+<p>The following logs will be filtered out when the url for the request matches any regex in the
+<code class="prettyprint">quietRoutes</code>:</p>
+<pre class="highlight plaintext tab-plaintext"><code>m-28019 - 19:58:44.830     &lt;debug&gt; [MAGE http] Received HTTP GET request: /check.txt
+m-28019 - 19:58:44.830   &lt;verbose&gt; [MAGE http] Following HTTP route /check.txt
+</code></pre>
+<p>The following log will be shown for any http request that takes longer than the configured
+<code class="prettyprint">longThreshold</code> and can be filtered out when the url for the request matches any reges in the
+<code class="prettyprint">longRoutes</code>:</p>
+<pre class="highlight plaintext tab-plaintext"><code>m-876 - 20:08:58.193   &lt;warning&gt; [MAGE http] /app/pc/landing completed in 1181 msec
+</code></pre>
+          <h1 id="clustering">Clustering</h1>
+
+<p>At some point during development, you will want to start looking into
+deploying multiple instances of your game servers; once you do, you will need
+to change your configuration to tell MAGE instances:</p>
+
+<ol>
+<li>How they can find each others (through service discovery);</li>
+<li>How they can connect to each others (through MAGE&rsquo;s Message Relay Protocol, or MMRP).</li>
+</ol>
+
+<p>This section will cover how you can configure these two services for different
+development and production use-cases.</p>
+
+<h2 id="cluster-identification">Cluster identification</h2>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">serviceName</span><span class="pi">:</span> <span class="s">applicationName-environmentID</span>
+</code></pre>
+<p>Currently the message server system will identify itself as being a part of a cluster by using the application root package name and version. However in environment where multiple instances of the same application and version are run, there will be conflicts with the messaging system. (e.g. inside single box which houses multiple test environments).</p>
+
+<p>To prevent pollution and contamination of messages, the server.serviceName configuration entry needs to be set, to give each environment a unique identifier.</p>
+
+<h2 id="service-discovery">Service discovery</h2>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">serviceDiscovery</span><span class="pi">:</span> <span class="s">false</span>
+</code></pre>
+<p>Service discovery takes care of letting each MAGE servers where they can find
+the other servers.</p>
+
+<table><thead>
+<tr>
+<th>Engine</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>single</td>
+<td>In-memory discovery service (useful during development)</td>
+</tr>
+<tr>
+<td>mdns</td>
+<td>Bonjour/MDNS-based service discovery</td>
+</tr>
+<tr>
+<td>zookeeper</td>
+<td><a href="https://zookeeper.apache.org/">ZooKeeper</a>-based service discovery</td>
+</tr>
+<tr>
+<td>consul</td>
+<td><a href="https://www.consul.io/">Consul</a>-based service discovery</td>
+</tr>
+</tbody></table>
+
+<p>By default, service discovery is disabled. To enable it, you will need
+to specify what engine you wish to use, and what configuration you wish
+to use for that engine.</p>
+
+<h3 id="single">Single</h3>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">serviceDiscovery</span><span class="pi">:</span>
+        <span class="na">engine</span><span class="pi">:</span> <span class="s">single</span>
+</code></pre>
+<p>The single engine can be used during development to locally allow the use of the service
+discovery API. It will only find the local server.</p>
+
+<p><br><br></p>
+
+<h3 id="bonjour-mdns">Bonjour/MDNS</h3>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">serviceDiscovery</span><span class="pi">:</span>
+        <span class="na">engine</span><span class="pi">:</span> <span class="s">mdns</span>
+        <span class="na">options</span><span class="pi">:</span>
+            <span class="c1"># Provide a unique identifier. You will need to configure</span>
+            <span class="c1"># this when you have multiple instances of your game cluster</span>
+            <span class="c1"># running on the same network, so to avoid MAGE servers from one</span>
+            <span class="c1"># cluster from connecting to your cluster.</span>
+            <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">UniqueIdOnTheNetwork"</span>
+</code></pre>
+<p>The MDNS engine will use MDNS broadcasts to let all MAGE servers on a given network
+when new servers appear or disappear.</p>
+
+<p>This engine is very convenient, since it allows for service discovery without having to
+configure any additonal services. However, note that certain network (such as the ones
+provided by AWS) wil not allow broadcasts, and so you will not be able to use this engine
+in such case.</p>
+
+<p><br><br><br><br></p>
+
+<h3 id="zookeeper">ZooKeeper</h3>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">serviceDiscovery</span><span class="pi">:</span>
+        <span class="na">engine</span><span class="pi">:</span> <span class="s">zookeeper</span>
+        <span class="na">options</span><span class="pi">:</span>
+            <span class="c1"># The interface to announce the IP for. By default, all</span>
+            <span class="c1"># IP are announced</span>
+            <span class="na">interface</span><span class="pi">:</span> <span class="s">eth0</span>
+
+            <span class="c1"># List of available ZooKeeper nodes (comma-separated)</span>
+            <span class="na">hosts</span><span class="pi">:</span> <span class="s2">"</span><span class="s">192.168.1.12:2181,192.168.3.18:2181"</span>
+
+            <span class="c1"># Additional options to pass to the client library.</span>
+            <span class="c1"># See https://github.com/alexguan/node-zookeeper-client#client-createclientconnectionstring-options</span>
+            <span class="c1"># for more details</span>
+            <span class="na">options</span><span class="pi">:</span>
+                <span class="na">sessionTimeout</span><span class="pi">:</span> <span class="s">30000</span>
+</code></pre>
+<p>The zookeeper engine will use ZooKeeper to announce MAGE servers.</p>
+
+<p><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
+<h3 id="consul">Consul</h3>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">serviceDiscovery</span><span class="pi">:</span>
+        <span class="na">engine</span><span class="pi">:</span> <span class="s">consul</span>
+        <span class="na">options</span><span class="pi">:</span>
+            <span class="c1"># Interface to announce</span>
+            <span class="na">interface</span><span class="pi">:</span> <span class="s">enp4s0</span>
+
+            <span class="c1"># optional</span>
+            <span class="na">consul</span><span class="pi">:</span>
+                <span class="na">host</span><span class="pi">:</span> <span class="s">consul.service.dc.consul</span>
+</code></pre>
+<p>The consul engine will use Consul to announce MAGE servers.</p>
+
+<h2 id="mage-message-relay-protocol-mmrp">MAGE Message Relay Protocol (MMRP)</h2>
+<pre class="highlight yaml tab-yaml"><code><span class="na">server</span><span class="pi">:</span>
+    <span class="na">mmrp</span><span class="pi">:</span>
+        <span class="na">bind</span><span class="pi">:</span>
+            <span class="na">host</span><span class="pi">:</span> <span class="s2">"</span><span class="s">*"</span>  <span class="c1"># asterisk for 0.0.0.0, or a valid IP address</span>
+            <span class="na">port</span><span class="pi">:</span> <span class="s2">"</span><span class="s">*"</span>  <span class="c1"># asterisk for any port, or a valid integer</span>
+        <span class="na">network</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s2">"</span><span class="s">192.168.2"</span>  <span class="c1"># formatted according to https://www.npmjs.com/package/netmask</span>
+</code></pre>
+<p>MMRP (MAGE Message Relay Protocol) is the messaging layer between node instances. It is used to enable communication between multiple MAGE instances and between the different node processes run by MAGE. In the end, it allows messages to flow from one user to another.</p>
+
+<p>MMRP depends on <a href="./#service-discovery">service discovery</a>
+to announce relays on the network to each process. The protocol and library
+used to communicate between processes is <a href="http://zeromq.org/">ZeroMQ</a>.</p>
+
+          <h1 id="metrics">Metrics</h1>
+
+<p>MAGE exposes different metrics out of the box.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<aside class="notice">
+This is not configured by default by a MAGE bootstrap.
+</aside>
+
+<blockquote>
+<p>config/default.yaml</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">sampler</span><span class="pi">:</span>
+    <span class="na">sampleMage</span><span class="pi">:</span> <span class="s">false</span>
+    <span class="na">intervals</span><span class="pi">:</span>
+        <span class="na">metrics</span><span class="pi">:</span> <span class="s">1000</span> <span class="c1"># Sampling time window, in milliseconds</span>
+</code></pre>
+<p>There are essentially two configuration elements which you can set
+in your configuration:</p>
+
+<ul>
+<li><strong>sampleMage</strong>: activate or deactivate MAGE&rsquo;s internal metrics</li>
+<li><strong>intervals</strong>: define endpoint(s) where to expose the metrics.</li>
+</ul>
+
+<p>Depending on your needs, you may wish to configure multiple endpoints, but
+in many cases, one will suffice.</p>
+
+<h2 id="accessing-metrics">Accessing metrics</h2>
+
+<blockquote>
+<p>Query sampler</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl http://localhost:8080/savvy/sampler/metrics
+</code></pre><pre class="highlight powershell tab-powershell"><code> Invoke-RestMethod -Method Get -Uri <span class="s2">"http://localhost:8080/savvy/sampler/metrics"</span> | ConvertTo-Json
+</code></pre>
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"metrics"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Unless you turn <code class="prettyprint">sampleMage</code> to true (and you really should!), the amount
+of data that will be returned will be minimal.</p>
+
+<p>However, when turning <code class="prettyprint">sampleMage</code> on, you will be able to see things such as number
+of state errors, mean latency per user command, and so on.</p>
+
+<h2 id="adding-custom-metrics">Adding custom metrics</h2>
+
+<blockquote>
+<p>lib/modules/players/usercommands/countClicks.js</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">mage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mage'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">sampler</span> <span class="o">=</span> <span class="nx">mage</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">sampler</span><span class="p">;</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">acl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">]</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">execute</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">sampler</span><span class="p">.</span><span class="nx">inc</span><span class="p">([</span><span class="s1">'players'</span><span class="p">,</span> <span class="s1">'clicks'</span><span class="p">],</span> <span class="s1">'count'</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nx">callback</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre>
+<blockquote>
+<p>Trigger clicks</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST http://127.0.0.1:8080/game/players.countClicks <span class="se">\</span>
+--data-binary @- <span class="sh">&lt;&lt; EOF
+[]
+{}
+EOF
+</span></code></pre><pre class="highlight powershell tab-powershell"><code> Invoke-RestMethod -Method Post -Uri <span class="s2">"http://127.0.0.1:8080/game/players.countClicks"</span> -Body <span class="s1">'[]
+{}'</span> | ConvertTo-Json
+</code></pre>
+<blockquote>
+<p>New sampler output</p>
+</blockquote>
+<pre class="highlight plaintext tab-plaintext"><code>[...]
+  "data": {
+    "players": {
+      "clicks": {
+        "count": {
+          "type": "inc",
+          "values": {
+            "1": {
+              "val": 4,
+              "timeStamp": 1491400000000
+[...]
+</code></pre>
+<p>Here we can see a full example of how we can create our own custom metrics and then
+access them.</p>
+
+<p>Sampler values are defined on-the-fly; therefore, you must be careful when
+choosing a sampler key for your metrics, so to avoid overlaps.</p>
+
+<p>See <a href="./api/interfaces/imagecore.html#sampler">the sampler API documentation</a> for more documentation.</p>
+
+          <h1 id="production">Production</h1>
+
+<p>In a production environment, you should set <code class="prettyprint">NODE_ENV</code> to <code class="prettyprint">production</code>
+and provide MAGE with a configuration file called
+<code class="prettyprint">config/production.yaml</code> or <code class="prettyprint">config/production.json</code>.</p>
+
+<h2 id="developmentmode">developmentMode</h2>
+
+<p>The <code class="prettyprint">developmentMode</code> entry MUST be turned off. You may also choose to run the game with an
+environment variable which explicitly turns it off, just in case the configuration went wrong, by
+running it like this:</p>
+<pre class="highlight shell tab-shell"><code><span class="nv">DEVELOPMENT_MODE</span><span class="o">=</span><span class="nb">false </span>npm start
+</code></pre><pre class="highlight powershell tab-powershell"><code>&amp;<span class="o">{</span> <span class="nv">$env</span>:DEVELOPMENT_MODE<span class="o">=</span><span class="s2">"false"</span>; npm <span class="nb">start</span> <span class="o">}</span>
+</code></pre>
+<h2 id="server">server</h2>
+
+<p>The &ldquo;server&rdquo; entry in the configuration must be set up properly. That <em>probably</em> means:</p>
+
+<ul>
+<li><code class="prettyprint">workers</code> should be set to a number to indicate a worker count, or even better, to <code class="prettyprint">true</code> (meaning
+that as many workers will be spawned as the CPU has cores).</li>
+<li><code class="prettyprint">serviceDiscovery.engine</code> should be appropriately selected for this environment.</li>
+<li><code class="prettyprint">mmrp</code> must be set up to allow all MAGE servers to communicate with each other on the network.</li>
+<li><code class="prettyprint">sampler</code> collects performance metrics. Are you going to use them or should you turn it off?</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="powershell">powershell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
